@@ -1,0 +1,45 @@
+Problem:
+Help visually impaired people with reading and sending emails
+
+Solution:
+Mobile app that reads the users' email and lets them write using vocal commands.
+
+Key Metrics:
+Downloads
+Low uninstall rates
+
+
+Unique Proposition Value:
+
+Makes reading and writting emails easier for visually impaired people
+through voice and gestures
+
+Unfair advantage:
+Specific people targeted
+
+Channels:
+Asociations
+Blogs
+Partnerships
+
+Customer Segments:
+
+Grandparents
+Blind people
+Drivers
+Visually Impaired people
+
+Early adopters:
+
+Blind people
+
+Cost Structure:
+
+Servers
+Data - traffic data, location(storage?)
+Development - initial
+Development - ongoing
+
+Revenue Streams:
+Donations
+
