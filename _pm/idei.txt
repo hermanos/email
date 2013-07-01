@@ -1,0 +1,11 @@
+features
+- localizare
+- calendar
+- informatii
+- citire ceas
+- contact de urgenta
+- descriere imagine 
+
+mvp
+- instant message
+ e-mail- citire, scriere
