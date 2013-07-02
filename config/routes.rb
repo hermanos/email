@@ -3,7 +3,6 @@ Email::Application.routes.draw do
 
   get "pages/index"
 
-  resources :users
   match 'home', :to=>'pages#index'
 
   # The priority is based upon order of creation:
