@@ -8,10 +8,14 @@
 </head>
 <body>
   <div class="container">
+ 
 
 <%= render partial: 'shared/header' %>     
-<%= render partial: 'shared/meniu' %> 
+<%= render partial: 'shared/meniu' %>
 <%= yield %>
+<hr>
+<%= render partial: 'shared/footer' %>    
+
   </div>
 </body>
 </html>
