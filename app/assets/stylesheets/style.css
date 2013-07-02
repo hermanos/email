@@ -1,0 +1,14 @@
+.header{
+	display: block;
+	text-align: center;
+	font-size: 40px;
+	margin: 30px auto;
+}
+
+/*li:first-child{
+	padding-left: 50px;
+}*/
+
+.navbar-inner{
+	text-align: center;
+}
