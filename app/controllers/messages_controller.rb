@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.json
+  has_and_belongs_to_many :user
   def index
     @messages = Message.all
 
