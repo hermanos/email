@@ -1,4 +1,7 @@
 Email::Application.routes.draw do
+  resources :messages
+
+
   devise_for :users
 
   get "pages/index"
