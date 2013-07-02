@@ -1,4 +1,6 @@
 Email::Application.routes.draw do
+  get "pages/download"
+
   devise_for :users
 
   get "pages/index"
