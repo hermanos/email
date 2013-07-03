@@ -13,6 +13,7 @@
 .navbar-inner {
 	text-align: center;
 	opacity: 0.6;
+
 }
 html {
  background-image: url("background.jpg"); 
@@ -30,12 +31,38 @@ a:hover{
 	background-color: transparent;
 	opacity: 0.5;
 }
-button {
-	width: 150px;
-	height: 150px;
-	background-color: rgba(255,255,255,0.4);
-	
-}
+
 span {
 	color: white;
+}
+.imag{
+	background-image: url("550x400.jpg");
+  background-repeat:no-repeat;
+ 	height: 400px;
+ 	width: 540px;
+ 	margin: 0px ;
+}
+.description{
+	padding: 10px 20px;
+}
+.description p{
+	color: rgba(255,255,255,0.75);
+	font-size: 22px;
+	line-height: 26px;
+}
+.description h1{
+	color:white;
+}
+button.read {
+	width: 170px;
+	height: 60px;
+	font-size: 18px;
+}
+
+button.sign {
+	margin-top: 15px;
+	width: 210px;
+	height: 70px;
+	font-size: 18px;
+	
 }
