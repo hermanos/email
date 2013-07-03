@@ -10,17 +10,22 @@
     <th></th>
     <th></th>
   </tr>
-
-<% @messages.each do |message| %>
-  <tr>
-    <td><%= message.sender_id %></td>
-    <td><%= message.receiver_id %></td>
-    <td><%= message.subject %></td>
-    <td><%= message.content %></td>
-    <td><%= link_to 'Show', message %></td>
-    <td><%= link_to 'Edit', edit_message_path(message) %></td>
-    <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% if user_signed_in? %>
+  <% current_user.messages.each do |message| %>
+    <tr>
+      <td><%= message.sender_id %></td>
+      <td><%= message.receiver_id %></td>
+      <td><%= message.subject %></td>
+      <td><%= message.content %></td>
+      <td><%= link_to 'Show', message %></td>
+      <td><%= link_to 'Edit', edit_message_path(message) %></td>
+      <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+<% else %>
+  <h2>
+    not logged in
+  </h2>
 <% end %>
 </table>
 

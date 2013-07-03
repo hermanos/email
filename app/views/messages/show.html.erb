@@ -2,22 +2,22 @@
 
 <p>
   <b>Sender:</b>
-  <%= @message.sender_id %>
+  <%= current_user.message.sender_id %>
 </p>
 
 <p>
   <b>Receiver:</b>
-  <%= @message.receiver_id %>
+  <%= current_user.message.receiver_id %>
 </p>
 
 <p>
   <b>Subject:</b>
-  <%= @message.subject %>
+  <%= current_user.message.subject %>
 </p>
 
 <p>
   <b>Content:</b>
-  <%= @message.content %>
+  <%= current_user.message.content %>
 </p>
 
 
