@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
   # GET /messages.json
 
   def index
-    @messages = Message.all
+    @messages = current_user.messages
 
     respond_to do |format|
       format.html # index.html.erb

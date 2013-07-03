@@ -15,4 +15,19 @@ class User < ActiveRecord::Base
   def messages
   	(sent_messages + received_messages).uniq  	
   end
+
+  def messages_with_sender_tag(tag)
+    returned_messages = []
+    sent_messages.each do |message|
+      returned_messages << message if message.has_sender_tag?(tag)
+    end
+  end
+
+  def messages_with_receiver_tag(tag)
+    returned_messages = []
+    sent_messages.each do |message|
+      returned_messages << message if message.has_receiver_tag?(tag)
+    end
+  end
+
 end

@@ -7,11 +7,19 @@ class Message < ActiveRecord::Base
   has_many :sender_tags, class_name: 'Tag', conditions: "owner = 'sender'"
   has_many :receiver_tags, class_name: 'Tag', conditions: "owner = 'receiver'"
 
-  after_commit :addTags
+  after_create :create_tags
 
-  def addTags
-  	t = Tag.create!
-  	update_attributes(tag: t)
+  def create_tags
+  	receiver_tags.create(message_id: id, owner: 'receiver', title: INBOX_TAG)
+    sender_tags.create(message_id: id, owner: 'sender', title: SENT_TAG) 	
+  end
+
+  def has_sender_tag?(tag)
+	sender_tags.map { |t| t.title }.include?(tag)  	
+  end
+
+  def has_sender_tag?(tag)
+	receiver_tags.map { |t| t.title }.include?(tag)  	
   end
 
 end
