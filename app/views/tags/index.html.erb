@@ -13,7 +13,6 @@
 <% @tags.each do |tag| %>
   <tr>
     <td><%= tag.message_id %></td>
-    <td><%= tag.user_id %></td>
     <td><%= tag.title %></td>
     <td><%= link_to 'Show', tag %></td>
     <td><%= link_to 'Edit', edit_tag_path(tag) %></td>

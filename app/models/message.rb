@@ -7,4 +7,11 @@ class Message < ActiveRecord::Base
   has_many :sender_tags, class_name: 'Tag', conditions: "owner = 'sender'"
   has_many :receiver_tags, class_name: 'Tag', conditions: "owner = 'receiver'"
 
+  after_commit :addTags
+
+  def addTags
+  	t = Tag.create!
+  	update_attributes(tag: t)
+  end
+
 end
