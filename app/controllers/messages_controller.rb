@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
+  before_filter :authenticate_user!
   # GET /messages
   # GET /messages.json
-
   def index
     @messages = current_user.messages
 

@@ -15,11 +15,11 @@ class Message < ActiveRecord::Base
   end
 
   def has_sender_tag?(tag)
-	sender_tags.map { |t| t.title }.include?(tag)  	
+    return sender_tags.map { |t| t.title }.include?(tag)  	
   end
 
-  def has_sender_tag?(tag)
-	receiver_tags.map { |t| t.title }.include?(tag)  	
+  def has_receiver_tag?(tag)
+    return receiver_tags.map { |t| t.title }.include?(tag)  	
   end
 
 end

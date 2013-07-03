@@ -11,7 +11,7 @@
     <th></th>
   </tr>
 <% if user_signed_in? %>
-  <% current_user.messages.each do |message| %>
+  <% @messages.each do |message| %>
     <tr>
       <td><%= message.sender_id %></td>
       <td><%= message.receiver_id %></td>

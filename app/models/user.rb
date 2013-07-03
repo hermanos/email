@@ -21,13 +21,15 @@ class User < ActiveRecord::Base
     sent_messages.each do |message|
       returned_messages << message if message.has_sender_tag?(tag)
     end
+    returned_messages
   end
 
   def messages_with_receiver_tag(tag)
     returned_messages = []
-    sent_messages.each do |message|
+    received_messages.each do |message|
       returned_messages << message if message.has_receiver_tag?(tag)
     end
+    returned_messages
   end
 
 end
