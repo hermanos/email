@@ -90,3 +90,23 @@ textarea{
   width: 400px;
   background-color: #f0f0f0;
 }
+
+button.googlebutton{
+  padding:-3px;
+  background-image: url("googleplay.png");
+  background-size: cover;
+  width: 155px;
+  height: 50px;
+}
+.buttons{
+  background-color:transparent;
+  border-radius: 5px;
+}
+
+button.appbutton{
+  padding:-3px;
+  background-image: url("appstore.png");
+  background-size: cover;
+  width: 155px;
+  height: 50px;
+}
