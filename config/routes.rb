@@ -1,11 +1,16 @@
 Email::Application.routes.draw do
-  get "pages/download"
+
 
   devise_for :users
 
-  get "pages/index"
 
   match 'home', :to=>'pages#index'
+  get "pages/download"
+
+  resources :tags
+  resources :messages
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
