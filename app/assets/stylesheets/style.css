@@ -91,22 +91,23 @@ textarea{
   background-color: #f0f0f0;
 }
 
-button.googlebutton{
-  padding:-3px;
-  background-image: url("googleplay.png");
+div.googlebutton{
+  background-image: url("googleplay1.png");
   background-size: cover;
-  width: 155px;
-  height: 50px;
-}
-.buttons{
-  background-color:transparent;
-  border-radius: 5px;
+  width: 130px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 10px;
 }
 
-button.appbutton{
-  padding:-3px;
-  background-image: url("appstore.png");
+div.appbutton{
+  background-image: url("appstore1.png");
   background-size: cover;
-  width: 155px;
-  height: 50px;
+  width: 130px;
+  height: 40px;
+ display: inline-block;
+}
+
+div.loginform{
+  margin-left: 400px;
 }

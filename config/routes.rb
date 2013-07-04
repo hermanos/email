@@ -5,7 +5,7 @@ Email::Application.routes.draw do
 
 
   match 'home', :to=>'pages#index'
-  get "pages/download"
+ 
 
   resources :tags
   resources :messages
