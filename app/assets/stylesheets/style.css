@@ -3,6 +3,10 @@ html {
  background-size: cover;
 }
 
+html.simple{
+  background-image: none;
+}
+
 body {
   font-family: "Dosis", Helvetica, Arial, sans-serif;
 	background-color: transparent;
@@ -18,6 +22,10 @@ a {
 }
 a:hover {
   color: white;
+}
+
+html.simple a, html.simple a:hover{
+  color: #222;
 }
 
 span {
