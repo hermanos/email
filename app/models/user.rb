@@ -16,7 +16,9 @@ class User < ActiveRecord::Base
   after_create :create_options
 
   def create_options
-    Option.create(user_id: id, option_value: optionVal, option_name: optionName)
+    DEFAULT_OPTIONS.each do |option|
+      Option.create!(user_id: id, option_name: option[0], option_value: option[1] )
+    end
   end
 
   def messages
