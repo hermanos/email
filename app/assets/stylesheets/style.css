@@ -1,0 +1,100 @@
+html {
+ background-image: url("background.jpg");
+ background-size: cover;
+}
+
+html.simple{
+  background-image: none;
+}
+
+body {
+  font-family: "Dosis", Helvetica, Arial, sans-serif;
+	background-color: transparent;
+  font-size: 16px;
+}
+
+hr {
+	opacity: 0.6;
+}
+
+a {
+  color: white;
+}
+a:hover {
+  color: white;
+}
+
+html.simple a, html.simple a:hover{
+  color: #222;
+}
+
+span {
+	color: white;
+}
+
+footer {
+  color: #888;
+  margin-top: 100px;
+  font-weight: 200;
+}
+
+footer a {
+  color: #d8d8d8;
+}
+
+.logo {
+  display: inline-block;
+  text-indent: -9000px;
+  width: 200px;
+  height: 60px;
+  background-color: red;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+
+nav.main-menu {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 200;
+}
+
+nav.main-menu ul li {
+  display: inline-block;
+  float: right;
+}
+
+nav.main-menu ul li a {
+  line-height: 40px;
+  margin-left: 20px;
+  color: #f0f0f0;
+}
+
+nav.main-menu ul li a:hover, nav.main-menu ul li.active a {
+  color: white;
+  text-decoration: none;
+}
+
+.description {
+	margin-top: 50px;
+	margin-bottom: 50px;
+  font-size: 24px;
+  line-height: 36px;
+  color: #f0f0f0;
+}
+
+.description p{
+	color: rgba(255,255,255,0.75);
+	font-size: 22px;
+	line-height: 26px;
+}
+.email{
+  color: rgba(255,255,255,0.50);
+  font-size: 16px;
+  line-height: 18px;
+}
+textarea{
+  width: 400px;
+  background-color: #f0f0f0;
+}

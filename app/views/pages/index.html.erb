@@ -1,2 +1,32 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<div class="email span6">
+  <p>From: tom.johnson@example.com</p>
+  <p>Subject: Hi there!</p>
+  
+  <p>Content:</p>
+  <textarea id="my-email" rows="10" cols="100" name="email-content">
+   Hi George, I was so happy to hear from you again. I hope you enjoyed the gift we've sent you.
+   I can't wait to meet you this summer. 
+
+   Take care,
+   Alice.
+  </textarea>
+</div>
+
+<div class="span6 text-center">
+  <p class="description">
+    An interactive application that allows users to read and write emails using vocal commands and gestures.
+  </p>
+
+  <p>
+  	<a href="#" class="btn btn-success btn-large" id="read-email">
+  		Read this email!
+    </a>
+  </p>
+
+  <p class="description">
+    <%= link_to 'Sign up', root_path, class: "btn btn-medium" %>
+    or
+    <%= link_to 'Log in', root_path %>
+  </p>
+
+</div>

@@ -1,9 +1,12 @@
 class MessagesController < ApplicationController
   before_filter :authenticate_user!
+  layout 'simple'
+
   # GET /messages
   # GET /messages.json
   def index
-    @messages = current_user.messages
+    @current_folder = params[:folder] || 'inbox'
+    @messages = current_user.own_messages_with_tag(@current_folder)
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,26 +1,15 @@
-<div class="page-header">
-  <h1 class="pull-right span12">
-      Email 
-  </h1>
-  <nav class="navbar">
-      <div class="navbar-inner">
-        <ul class="nav">
-          	<li>	
-          	  <%= link_to 'Home', root_path %>
-          	</li>
-            <li>  
-              <%= link_to 'Register', new_user_registration_path %>
-            </li>
-            <li>  
-              <%= link_to 'Sign Out', destroy_user_session_path, :method => 'delete' %>
-            </li>
-            <li>  
-              <%= link_to 'Sign In', new_user_session_path %>
-            </li>
-            <li>  
-              <%= link_to 'Messages', messages_path %>
-            </li>
-        </ul>
-      </div>
+<div class="span6">
+  <nav class="main-menu">
+    <ul>
+      <li>
+        <%= link_to 'Sign Up', root_path %>
+      </li>
+      <li>
+        <%= link_to 'Log in', root_path %>
+      </li>
+    	<li>
+    	  <%= link_to 'Download', pages_download_path %>
+    	</li>
+    </ul>
   </nav>
 </div>

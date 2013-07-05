@@ -39,4 +39,8 @@ class User < ActiveRecord::Base
     returned_messages
   end
 
+  def own_messages_with_tag(tag)
+    (messages_with_sender_tag(tag) + messages_with_receiver_tag(tag)).uniq
+  end
+
 end

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="simple">
 <head>
   <title>Email</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -8,20 +8,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
-
-    <div class="row">
-      <%= render partial: 'shared/header' %>
-      <%= render partial: 'shared/meniu' %>
-    </div>
-
-    <div class="row">
-      <%= yield %>
-    </div>
-
-    <%= render partial: 'shared/footer' %>
-
-  </div>
+  
+  <%= yield %>
 
   <audio id="player" src="">
   </audio>

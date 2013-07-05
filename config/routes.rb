@@ -1,17 +1,15 @@
 Email::Application.routes.draw do
+
   resources :options
-
-
-  resources :tags
-
-
-  resources :messages
-
 
   devise_for :users
 
 
   match 'home', :to=>'pages#index'
+  get "pages/download"
+
+  resources :tags
+  resources :messages
 
 
 
