@@ -73,7 +73,7 @@ class OptionsController < ApplicationController
 
   # DELETE /options/1
   # DELETE /options/1.json
-  def destroy
+  def destroy 
     @option = Option.find(params[:id])
     @option.destroy
 

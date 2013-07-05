@@ -2,26 +2,25 @@
 
 <table>
   <tr>
-    <th>User</th>
-    <th>Option value</th>
     <th>Option name</th>
+    <th>Option value</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @options.each do |option| %>
-  <tr>
-    <td><%= option.user_id %></td>
-    <td><%= option.option_value %></td>
-    <td><%= option.option_name %></td>
-    <td><%= link_to 'Show', option %></td>
-    <td><%= link_to 'Edit', edit_option_path(option) %></td>
-    <td><%= link_to 'Destroy', option, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <%= form_for option, :html => {:id => 'myForm'} do |f| %>
+    <tr>
+      <td><%= option.option_name %></td>
+      <td><%= f.text_field :option_value %></td>
+      <!-- <td><%= link_to 'Show', option %></td>
+      <td><%= link_to 'Edit', edit_option_path(option) %></td>
+      <td><%= link_to 'Destroy', option, method: :delete, data: { confirm: 'Are you sure?' } %></td>  -->
+    </tr>
+  <% end %>
 <% end %>
+<button id='submitButton'> Apply </button>
 </table>
 
 <br />
-
-<%= link_to 'New Option', new_option_path %>
