@@ -1,20 +1,20 @@
 <div class="signupform">
-<h2  class="formtitle">Sign up</h2>
+  <h2  class="formtitle">Sign up</h2>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+    <div><span class="inlinefields"><%= f.label :email %></span>
+    <%= f.email_field :email, :autofocus => true %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+    <div><span class="inlinefields"><%= f.label :password %></span>
+    <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+    <div><span class="inlinefields"><%= f.label :password_confirmation %></span>
+    <%= f.password_field :password_confirmation %></div>
 
-  <div class="buttonsignup"><%= f.submit "Sign up" %></div>
-<% end %>
+    <div><label> </label><%= f.submit "Sign up", class:'btn btn-medium' %></div>
+  <% end %>
 
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
 </div>
