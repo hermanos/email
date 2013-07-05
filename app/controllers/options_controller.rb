@@ -26,7 +26,7 @@ class OptionsController < ApplicationController
   # GET /options/new
   # GET /options/new.json
   def new
-    @option = Option.new
+    @option = current_user.options.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,7 +42,7 @@ class OptionsController < ApplicationController
   # POST /options
   # POST /options.json
   def create
-    @option = Option.new(params[:option])
+    @option = current_user.options.new(params[:option])
 
     respond_to do |format|
       if @option.save
