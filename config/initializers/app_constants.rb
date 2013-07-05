@@ -1,4 +1,5 @@
-INBOX_TAG = 'Inbox'
-SENT_TAG = 'Sent'
-TRASH_TAG = 'Trash'
-ARCHIVE_TAG = 'Archive'
+INBOX_TAG = 'inbox'
+SENT_TAG = 'sent'
+TRASH_TAG = 'trash'
+ARCHIVE_TAG = 'archive'
+OPTION_

@@ -11,6 +11,13 @@ class User < ActiveRecord::Base
   
   has_many :sent_messages, :class_name => 'Message', :foreign_key => 'sender_id'
   has_many :received_messages, :class_name => 'Message', :foreign_key => 'receiver_id'
+  has_many :options
+
+  after_create :create_options
+
+  def create_options
+    Option.create(user_id: id, option_value: optionVal, option_name: optionName)
+  end
 
   def messages
   	(sent_messages + received_messages).uniq  	
