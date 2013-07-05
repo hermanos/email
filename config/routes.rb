@@ -1,4 +1,7 @@
 Email::Application.routes.draw do
+  resources :options
+
+
   resources :tags
 
 
