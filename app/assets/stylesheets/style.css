@@ -26,7 +26,7 @@ span {
 
 footer {
   color: #888;
-  margin-top: 100px;
+  margin-top: 90px;
   font-weight: 200;
 }
 
@@ -41,7 +41,7 @@ footer a {
   height: 60px;
   background-color: red;
   margin-top: 60px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 
@@ -90,24 +90,26 @@ textarea{
   width: 400px;
   background-color: #f0f0f0;
 }
-
-div.googlebutton{
-  background-image: url("googleplay1.png");
-  background-size: cover;
-  width: 130px;
-  height: 40px;
-  display: inline-block;
-  margin-right: 10px;
-}
-
-div.appbutton{
-  background-image: url("appstore1.png");
-  background-size: cover;
-  width: 130px;
-  height: 40px;
- display: inline-block;
-}
-
 div.loginform{
-  margin-left: 400px;
+  margin-left: 340px;
+  background-color: rgba(0,0,0,0.2);
+  width: 230px;
+  height: 390px;
+  padding: 20px 50px;
+  border-radius: 8px;
+  color:white;
+}
+
+div.signupform{
+  margin-left: 340px;
+  background-color: rgba(0,0,0,0.2);
+  width: 230px;
+  height: 420px;
+  padding: 20px 50px;
+  border-radius: 8px;
+  color:white;
+}
+
+h2.formtitle{
+  font-weight: normal;
 }
