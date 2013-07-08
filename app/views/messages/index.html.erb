@@ -29,7 +29,7 @@
         <% if @current_folder == 'inbox' %>
           <p>
             From:
-             <%= @messages.first.sender.email %>
+             <%= message.sender.email %>
           </p>
           <% else %>
             <p>
