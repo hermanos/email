@@ -180,7 +180,25 @@ div#list_mails{
   line-height: 15px;
   height: 530px;
   overflow: auto;
-	margin-left:10px;
+}
+
+div#list_mails span{
+	display:block;
+	background-color: transparent;
+}
+
+#list_mails hr{
+  margin:0;
+  opacity:1;
+}
+
+#list_mails ul {
+	margin-left:5px;
+	list-style-type:none;
+}
+
+#list_mails ul li.active {
+	background-color: #D4D9B0;
 }
 
 div#mail{
@@ -243,16 +261,10 @@ div#content{
   margin-top: 10px;
 }
 
-div#data{
+div#list_mails span.data{
   font-size: 10px;
+	margin-left:5px;
 }
-
-#list_mails hr{
-  margin:0;
-  padding-bottom: 10px;
-  opacity:1;
-}
-
 
 h2.formtitle{
   font-weight: normal;

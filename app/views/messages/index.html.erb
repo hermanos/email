@@ -24,35 +24,41 @@
    
   <div id="content">
   <div id="list_mails">
+		<ul>
     <% @messages.each do |message| %>
-      <%= link_to '#' do %>
-        <% if @current_folder == 'inbox' %>
-          <p>
-            From:
-             <%= message.sender.email %>
-          </p>
-          <% else %>
-            <p>
+			<li>
+	      <%= link_to '#' do %>
+	        <% if @current_folder == 'inbox' %>
+	          <span class="maildet">
+	            From:
+	             <%= message.sender.email %>
+	          </span>
+	        <% else %>
+            <span class="maildet">
               To:
                <%= message.receiver.email %>
-            </p>
-        <% end %>
+            </span>
+	        <% end %>
 
-           <p>
-            Subject:
-            <%= message.subject %>
-          </p>
-          <div id="data">
-              <%= message.created_at %>
-          </div><hr>
-        <% end %>
+					<span class="maildet">
+          	Subject:
+          	<%= message.subject %>
+					</span>
+	        <span class="data">
+	          <%= message.created_at %>
+	        </span>
+					
+					<hr>
+	       <% end %>
+			</li>
       
       <!--   <td><%= link_to 'Show', message %></td>
         <td><%= link_to 'Edit', edit_message_path(message) %></td>
         <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-      <% end %>     
-  </div>
-  <div id="mail_menu">
+     <% end %>     
+		 </ul>
+   </div>
+   <div id="mail_menu">
     <ul>
       <li>
         <%= link_to 'Add contact', "#" %>
