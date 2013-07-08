@@ -118,9 +118,9 @@ div#content{
 div#folders{
   
   padding-top:20px;
-  height: 24px;
+  height: 30px;
   margin:0;
-
+  background-color: #D4D9B0;
 }
 
 div#folders ul{
@@ -131,24 +131,29 @@ div#folders ul{
 }
 
 div#folders ul li{
-    display: inline-block;
-
+  display: inline-block;
+  margin-right: 5px;
 }
 
-div#folders ul li a, div#compose a{
-    font-size: 14px;
-    font-family:Helvetica, Arial, sans-serif;
-    background-color: #F3F3F3;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-color: #C8C8C8;
-    border-style: solid;
-    border-width: 1px ;
-    text-shadow: 1px 1px 2px gray;
+div#folders ul li a{
+  font-size: 14px;
+  font-family:Helvetica, Arial, sans-serif;
+  background-color: #F3F3F3;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-color: #C8C8C8;
+  border-style: solid;
+  border-width: 1px ;
+  text-shadow: 1px 1px 1px gray;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+div#folders ul li:first-child{
+  margin-right: 50px;
 }
 
-div#folders ul li a:hover, div#compose a:hover{
-    background-color: #E8E8E8;
+div#folders ul li a:hover{
+  background-color: #E8E8E8;
 }
 
 
@@ -162,6 +167,8 @@ div#folders ul li a:hover, div#compose a:hover{
 }*/
 div.messagecontainer{
   margin:auto 20px;
+  background-color: #f0f0f0;
+  height:600px;
 }
 div#list_mails{
   font-size: 12px;
@@ -185,18 +192,11 @@ div#mail_menu{
   width:150px;
   border-left:1px solid #E8E8E8;
   float:right;
-    
 }
 
 div#mail_menu ul{
   list-style-type: none;
   margin:0;
-  
-}
-
-div#mail_menu ul li{
-  /*display:block;*/
-  background-color:red;
 }
 
 div#mail_menu ul li a, div#mail_menu ul li a:hover{
@@ -206,16 +206,16 @@ div#mail_menu ul li a, div#mail_menu ul li a:hover{
 }
 
 div#mail_menu ul li a{
-  background-color:#F8F8F8;
+  background-color:#F0F0F0;
 }
 
 
 div#mail_menu ul li a:hover{
-  background-color: #F0F0F0;
+  background-color: #F8F8F8;
 }
 
 div#compose{
-    border:1px solid #E8E8E8;
+    border-bottom:1px solid #E8E8E8;
     height: 28px;
     padding-top: 7px;
 }
@@ -239,6 +239,7 @@ div#from_to{
 }
 div#content{
   border: 1px black;
+  margin-top: 10px;
 }
 
 div#data{
@@ -300,6 +301,9 @@ div.forgotpassform label{
   display:inline-block;
   width: 100px;
 }
+div#compose{
+  background-color: #D4D9B0;
+}
 div.composeform{
   margin-left: 50px;
 }
@@ -314,8 +318,11 @@ div.composeform h1{
 div#mail #from_to{
   height: 530px;
 }
-div#list_mails p:visited{
-  background-color: red;
+div#list_mails :hover{
+  text-decoration: none;
+}
+div#mail{
+  background-color: #f8f8f8;
 }
 
 
