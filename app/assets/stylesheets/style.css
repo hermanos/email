@@ -98,3 +98,147 @@ textarea{
   width: 400px;
   background-color: #f0f0f0;
 }
+
+div#content{
+  font-family:Helvetica, Arial, sans-serif;
+  border:1px solid black;
+  overflow: auto;
+}
+
+div#folders{
+  
+  padding-top:20px;
+  height: 24px;
+  margin:0;
+
+}
+
+div#folders ul{
+  list-style-type: none;
+  margin: 0px;
+  width:500px;
+  float:left;
+}
+
+div#folders ul li{
+    display: inline-block;
+
+}
+
+div#folders ul li a, div#compose a{
+    font-size: 14px;
+    font-family:Helvetica, Arial, sans-serif;
+    background-color: #F3F3F3;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-color: #C8C8C8;
+    border-style: solid;
+    border-width: 1px ;
+    text-shadow: 1px 1px 2px gray;
+
+    
+
+}
+
+div#folders ul li a:hover, div#compose a:hover{
+    background-color: #E8E8E8;
+}
+
+
+/*#folders a:first-child{
+  -webkit-border-bottom-left-radius: 12px;
+  -webkit-border-top-left-radius: 12px;  
+  -moz-border-radius-topleft: 12px;
+  -moz-border-radius-bottomleft: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}*/
+
+div#list_mails{
+    font-size: 12px;
+    position: absolute;
+    width:250px;
+    float:left;
+    border: 1px solid #E8E8E8;
+    border-top:none;
+    line-height: 15px;
+}
+
+div#mail{
+    margin-left: 252px;
+    margin-right:152px;
+    border-right: 1px solid #E8E8E8;
+}
+
+div#mail_menu{
+    width:150px;
+    border-left:1px solid #E8E8E8;
+    float:right;
+    
+}
+
+div#mail_menu ul{
+  list-style-type: none;
+  margin:0;
+  
+}
+
+div#mail_menu ul li{
+  /*display:block;*/
+  background-color:red;
+}
+
+div#mail_menu ul li a, div#mail_menu ul li a:hover{
+  display: block;
+  text-decoration: none;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+div#mail_menu ul li a{
+  background-color:#F8F8F8;
+}
+
+
+div#mail_menu ul li a:hover{
+  background-color: #F0F0F0;
+}
+
+div#compose{
+    border:1px solid #E8E8E8;
+    height: 28px;
+    padding-top: 7px;
+}
+
+div#signout{
+  float:right;
+  width: 70px;
+}
+
+div#signout a:hover{
+  text-decoration: none;
+
+}
+
+div#from_to{
+  width:100%;
+  height:300px;
+  border:1px solid #E8E8E8;
+  border-right: none;
+
+}
+div#content{
+  border: 1px black;
+}
+
+div#data{
+  font-size: 10px;
+}
+
+#list_mails hr{
+  margin:0;
+  padding-bottom: 10px;
+  opacity:1;
+}
+
+
+

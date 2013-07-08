@@ -1,48 +1,106 @@
-<%= link_to 'Inbox', messages_path %>
-<%= link_to 'Sent', messages_path(folder: 'sent') %>
-<%= link_to 'Drafts', messages_path(folder: 'drafts') %>
-<%= link_to 'Archive', messages_path(folder: 'archive') %>
+  <div id="folders">
+    <ul>
+      <li>
+        <%= link_to 'INBOX', messages_path %>
+      </li><li>
+        <%= link_to 'SENT', messages_path(folder: 'sent') %>
+      </li><li>
+        <%= link_to 'DRAFTS', messages_path(folder: 'drafts') %>
+      </li><li>
+        <%= link_to 'ARCHIVE', messages_path(folder: 'archive') %>
+      </li>
+    </ul>
+    <div id="signout">
+      <%= link_to 'SIGN OUT', "#" %>
+    </div>
+   </div>
 
 
-<p>
-  <%= @current_folder %>
-</p>
+  <div id="compose">
+      <%= link_to 'COMPOSE', new_message_path %>
+  </div>
+  <div id="content">
+  <div id="list_mails">
+      
+       <% @messages.each do |message| %>
+       <!--<% link_to '#' do %> -->
+        <% if @current_folder=='inbox' %>
+          <p>
+            From:
+             <%= message.sender.email %>
+          </p>
+          <% else %>
+            <p>
+              To:
+               <%= message.receiver.email %>
+            </p>
+          <% end %>
+
+           <p>
+            Subject:
+            <%= message.subject %>
+          </p>
+          <div id="data">
+              <%= message.created_at %>
+          </div><hr>
+          <% end %>
+      
+      <!--   <td><%= link_to 'Show', message %></td>
+        <td><%= link_to 'Edit', edit_message_path(message) %></td>
+        <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+     
+    <% end %>
+  
 
 
+      
+  </div>
+
+        <div id="mail_menu">
+          <ul>
+            <li>
+              <%= link_to 'Add contact', "#" %>
+            </li>
+            <li>
+              <%= link_to 'Reply to sender', "#" %>
+            </li>
+            <li>
+              <%= link_to 'Reply to all', "#" %>
+            </li>
+            <li>
+              <%= link_to 'Forward', "#" %>
+            </li>
+            <li>
+              <%= link_to 'Delete', "#" %>
+            </li>
+            <li>
+              <%= link_to 'Move', "#" %>
+            </li>
+          </ul>
+  </div>
+
+  <div id="mail">
+      <div id="from_to">
+        <p>
+            Subject:
+            
+        </p>
+        <% if @current_folder=='inbox' %>
+           <p class="sender_receiver">
+               From:
+                
+            </p>
+        
+            <p class="sender_receiver">
+                To:
+            </p>
+        <% else %>
+            <p class="sender_receiver">
+                To:
+            </p>
+        <% end %>
+      </div>
 
 
-
-<h1>Listing messages</h1>
-
-<table>
-  <tr>
-    <th>Sender</th>
-    <th>Receiver</th>
-    <th>Subject</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-<% if user_signed_in? %>
-  <% @messages.each do |message| %>
-    <tr>
-      <td><%= message.sender_id %></td>
-      <td><%= message.receiver_id %></td>
-      <td><%= message.subject %></td>
-      <td><%= message.content %></td>
-      <td><%= link_to 'Show', message %></td>
-      <td><%= link_to 'Edit', edit_message_path(message) %></td>
-      <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-<% else %>
-  <h2>
-    not logged in
-  </h2>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Message', new_message_path %>
+  </div>
+</div>
