@@ -1,4 +1,4 @@
-<h1>Listing options</h1>
+<h1>Options</h1>
 
 <table>
   <tr>
@@ -10,17 +10,16 @@
   </tr>
 
 <% @options.each do |option| %>
-  <%= form_for option, :html => {:id => 'myForm'} do |f| %>
-    <tr>
-      <td><%= option.option_name %></td>
-      <td><%= f.text_field :option_value %></td>
-      <!-- <td><%= link_to 'Show', option %></td>
-      <td><%= link_to 'Edit', edit_option_path(option) %></td>
-      <td><%= link_to 'Destroy', option, method: :delete, data: { confirm: 'Are you sure?' } %></td>  -->
-    </tr>
+  <%= form_for option do |f| %>
+  <div class="field">
+    <%= option.option_name %><br />
+    <%= f.text_field :option_value %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
   <% end %>
 <% end %>
-<button id='submitButton'> Apply </button>
 </table>
 
 <br />
