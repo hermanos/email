@@ -39,9 +39,10 @@ footer a {
   text-indent: -9000px;
   width: 200px;
   height: 60px;
-  background-color: red;
+  background-image:url("logo.png");
   margin-top: 60px;
   margin-bottom: 80px;
+  background-repeat: no-repeat;
 }
 
 
