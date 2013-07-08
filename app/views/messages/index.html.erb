@@ -11,11 +11,7 @@
       </li>
     </ul>
     <div id="signout">
-<<<<<<< HEAD
       <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
-=======
-      <%= link_to 'SIGN OUT', root_path %>
->>>>>>> 3ec2077365e3770c572e6444e9ba4d7f2408b7f5
     </div>
    </div>
 
@@ -37,11 +33,6 @@
               To:
                <%= message.receiver.email %>
             </p>
-        <% else %>
-          <p>
-            To:
-            <%= message.receiver.email %>
-          </p>
         <% end %>
 
            <p>
