@@ -29,7 +29,11 @@ html.simple a, html.simple a:hover{
 }
 
 span {
-	color: white;
+  padding: 5px;
+  background-color: white;
+  font-size: 14px;
+  border-radius:4px;
+	color: black;
 }
 
 footer {
@@ -70,6 +74,11 @@ nav.main-menu ul li a {
   line-height: 40px;
   margin-left: 20px;
   color: #f0f0f0;
+}
+nav.main-menu li:first-child
+{ 
+  font-size: 21px;
+  color: white;
 }
 
 nav.main-menu ul li a:hover, nav.main-menu ul li.active a {
