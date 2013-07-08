@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
   # GET /messages.json
   def index
     @current_folder = params[:folder] || 'inbox'
-    @messages = current_user.own_messages_with_tag(@current_folder)
+    @messages = current_user.own_messages_with_tag(@current_folder).sort_by { |message| message.created_at }.reverse
 
     respond_to do |format|
       format.html # index.html.erb
@@ -51,7 +51,7 @@ class MessagesController < ApplicationController
 
       respond_to do |format|
         if @message.save
-          format.html { redirect_to @message, notice: 'Message was successfully created.' }
+          format.html { redirect_to messages_path, notice: 'Message was successfully created.' }
           format.json { render json: @message, status: :created, location: @message }
         else
           format.html { render action: "new" }

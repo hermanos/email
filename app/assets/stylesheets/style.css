@@ -30,10 +30,13 @@ html.simple a, html.simple a:hover{
 
 span {
   padding: 5px;
-  background-color: white;
-  font-size: 14px;
+ /**/
+background-color:rgba(0,100,0,0.5);
+  font-size: 13px;
   border-radius:4px;
-	color: black;
+	color: white;
+
+
 }
 
 footer {
