@@ -2,12 +2,18 @@
   <div id="folders">
     <ul>
       <li>
+       <%= link_to 'COMPOSE', new_message_path %>
+      </li>
+      <li>
         <%= link_to 'INBOX', messages_path(folder: 'inbox') %>
-      </li><li>
+      </li>
+      <li>
         <%= link_to 'SENT', messages_path(folder: 'sent') %>
-      </li><li>
+      </li>
+      <li>
         <%= link_to 'DRAFTS', messages_path(folder: 'drafts') %>
-      </li><li>
+      </li>
+      <li>
         <%= link_to 'ARCHIVE', messages_path(folder: 'archive') %>
       </li>
     </ul>
@@ -15,11 +21,7 @@
       <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
     </div>
    </div>
-
-
-  <div id="compose">
-      <%= link_to 'COMPOSE', new_message_path %>
-  </div>
+   
   <div id="content">
   <div id="list_mails">
     <% @messages.each do |message| %>
@@ -48,35 +50,29 @@
       <!--   <td><%= link_to 'Show', message %></td>
         <td><%= link_to 'Edit', edit_message_path(message) %></td>
         <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-     
-    <% end %>
-  
-
-
-      
+      <% end %>     
   </div>
-
-        <div id="mail_menu">
-          <ul>
-            <li>
-              <%= link_to 'Add contact', "#" %>
-            </li>
-            <li>
-              <%= link_to 'Reply to sender', "#" %>
-            </li>
-            <li>
-              <%= link_to 'Reply to all', "#" %>
-            </li>
-            <li>
-              <%= link_to 'Forward', "#" %>
-            </li>
-            <li>
-              <%= link_to 'Delete', "#" %>
-            </li>
-            <li>
-              <%= link_to 'Move', "#" %>
-            </li>
-          </ul>
+  <div id="mail_menu">
+    <ul>
+      <li>
+        <%= link_to 'Add contact', "#" %>
+      </li>
+      <li>
+        <%= link_to 'Reply to sender', "#" %>
+      </li>
+      <li>
+        <%= link_to 'Reply to all', "#" %>
+      </li>
+      <li>
+        <%= link_to 'Forward', "#" %>
+      </li>
+      <li>
+        <%= link_to 'Delete', "#" %>
+      </li>
+      <li>
+        <%= link_to 'Move', "#" %>
+      </li>
+    </ul>
   </div>
 
   <div id="mail">
@@ -84,5 +80,6 @@
         
       </div>
   </div>
+
 </div>
 </div>
