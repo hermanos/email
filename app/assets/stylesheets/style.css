@@ -34,7 +34,7 @@ span {
 
 footer {
   color: #888;
-  margin-top: 100px;
+  margin-top: 90px;
   font-weight: 200;
 }
 
@@ -47,9 +47,10 @@ footer a {
   text-indent: -9000px;
   width: 200px;
   height: 60px;
-  background-color: red;
+  background-image:url("logo.png");
   margin-top: 60px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
+  background-repeat: no-repeat;
 }
 
 
@@ -239,6 +240,58 @@ div#data{
   padding-bottom: 10px;
   opacity:1;
 }
+
+
+h2.formtitle{
+  font-weight: normal;
+}
+
+div.loginform{
+  margin-left: 240px;
+  background-color: rgba(0,0,0,0.2);
+  width: 360px;
+  height: 300px;
+  padding: 45px 80px;
+  border-radius: 8px;
+  color:white;
+}
+
+div.loginform label{
+  display:inline-block;
+  width:100px;
+}
+
+div.signupform{
+  margin-left: 240px;
+  background-color: rgba(0,0,0,0.2);
+  width: 360px;
+  height: 300px;
+  padding: 45px 80px;
+  border-radius: 8px;
+  color:white;
+}
+
+div.signupform label{
+  display:inline-block;
+  width:100px;
+}
+
+div.forgotpassform{
+  margin-left: 240px;
+  background-color: rgba(0,0,0,0.2);
+  width: 360px;
+  height: 200px;
+  padding: 45px 80px;
+  border-radius: 8px;
+  color:white;
+}
+
+div.forgotpassform label{
+  display:inline-block;
+  width: 100px;
+}
+
+
 
 
 
