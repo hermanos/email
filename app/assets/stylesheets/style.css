@@ -145,9 +145,6 @@ div#folders ul li a, div#compose a{
     border-style: solid;
     border-width: 1px ;
     text-shadow: 1px 1px 2px gray;
-
-    
-
 }
 
 div#folders ul li a:hover, div#compose a:hover{
@@ -163,27 +160,31 @@ div#folders ul li a:hover, div#compose a:hover{
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
 }*/
-
+div.messagecontainer{
+  margin:auto 20px;
+}
 div#list_mails{
-    font-size: 12px;
-    position: absolute;
-    width:250px;
-    float:left;
-    border: 1px solid #E8E8E8;
-    border-top:none;
-    line-height: 15px;
+  font-size: 12px;
+  position: absolute;
+  width:350px;
+  float:left;
+  border: 1px solid #E8E8E8;
+  border-top:none;
+  line-height: 15px;
+  height: 530px;
+  overflow: auto;
 }
 
 div#mail{
-    margin-left: 252px;
-    margin-right:152px;
-    border-right: 1px solid #E8E8E8;
+  margin-left: 350px;
+  margin-right:152px;
+  border-right: 1px solid #E8E8E8;
 }
 
 div#mail_menu{
-    width:150px;
-    border-left:1px solid #E8E8E8;
-    float:right;
+  width:150px;
+  border-left:1px solid #E8E8E8;
+  float:right;
     
 }
 
@@ -309,6 +310,12 @@ div.composeform label{
 }
 div.composeform h1{
   font-size: 28px;
+}
+div#mail #from_to{
+  height: 530px;
+}
+div#list_mails p:visited{
+  background-color: red;
 }
 
 
