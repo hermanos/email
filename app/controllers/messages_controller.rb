@@ -45,16 +45,21 @@ class MessagesController < ApplicationController
   # POST /messages.json
   def create
     @receiver = User.find_by_email(params[:message][:receiver])
-    @message = Message.new(sender_id: current_user.id, receiver_id: @receiver.id, subject: params[:message][:subject], content: params[:message][:content])
+    unless @receiver.nil?
+      @receiver = User.find_by_email(params[:message][:receiver])
+      @message = Message.new(sender_id: current_user.id, receiver_id: @receiver.id, subject: params[:message][:subject], content: params[:message][:content])
 
-    respond_to do |format|
-      if @message.save
-        format.html { redirect_to @message, notice: 'Message was successfully created.' }
-        format.json { render json: @message, status: :created, location: @message }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @message.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @message.save
+          format.html { redirect_to @message, notice: 'Message was successfully created.' }
+          format.json { render json: @message, status: :created, location: @message }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @message.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      render text: "Invalid email address"
     end
   end
 
