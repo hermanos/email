@@ -11,7 +11,7 @@
       </li>
     </ul>
     <div id="signout">
-      <%= link_to 'SIGN OUT', "#" %>
+      <%= link_to 'SIGN OUT', root_path %>
     </div>
    </div>
 
@@ -23,18 +23,18 @@
   <div id="list_mails">
       
        <% @messages.each do |message| %>
-       <!--<% link_to '#' do %> -->
+       <% link_to '#' do %>
         <% if @current_folder=='inbox' %>
           <p>
             From:
              <%= message.sender.email %>
           </p>
-          <% else %>
-            <p>
-              To:
-               <%= message.receiver.email %>
-            </p>
-          <% end %>
+        <% else %>
+          <p>
+            To:
+            <%= message.receiver.email %>
+          </p>
+        <% end %>
 
            <p>
             Subject:
