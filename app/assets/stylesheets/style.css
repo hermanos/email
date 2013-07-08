@@ -166,7 +166,7 @@ div#folders ul li a:hover{
   border-bottom-left-radius: 12px;
 }*/
 div.messagecontainer{
-  margin:auto 20px;
+  margin:10px 20px;
   background-color: #f0f0f0;
   height:600px;
 }
@@ -180,6 +180,7 @@ div#list_mails{
   line-height: 15px;
   height: 530px;
   overflow: auto;
+	margin-left:10px;
 }
 
 div#mail{
@@ -207,8 +208,8 @@ div#mail_menu ul li a, div#mail_menu ul li a:hover{
 
 div#mail_menu ul li a{
   background-color:#F0F0F0;
+	margin-left:5px;
 }
-
 
 div#mail_menu ul li a:hover{
   background-color: #F8F8F8;
