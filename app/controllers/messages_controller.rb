@@ -59,7 +59,7 @@ class MessagesController < ApplicationController
         end
       end
     else
-      render text: "Invalid email address"
+      render m_error_path
     end
   end
 
