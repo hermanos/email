@@ -1,7 +1,7 @@
   <div id="folders">
     <ul>
       <li>
-        <%= link_to 'INBOX', messages_path %>
+        <%= link_to 'INBOX', messages_path(folder: 'inbox') %>
       </li><li>
         <%= link_to 'SENT', messages_path(folder: 'sent') %>
       </li><li>
@@ -11,7 +11,7 @@
       </li>
     </ul>
     <div id="signout">
-      <%= link_to 'SIGN OUT', "#" %>
+      <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
     </div>
    </div>
 
@@ -21,20 +21,19 @@
   </div>
   <div id="content">
   <div id="list_mails">
-      
-       <% @messages.each do |message| %>
-       <!--<% link_to '#' do %> -->
-        <% if @current_folder=='inbox' %>
+    <% @messages.each do |message| %>
+      <%= link_to '#' do %>
+        <% if @current_folder == 'inbox' %>
           <p>
             From:
-             <%= message.sender.email %>
+             <%= @messages.first.sender.email %>
           </p>
           <% else %>
             <p>
               To:
                <%= message.receiver.email %>
             </p>
-          <% end %>
+        <% end %>
 
            <p>
             Subject:
@@ -43,7 +42,7 @@
           <div id="data">
               <%= message.created_at %>
           </div><hr>
-          <% end %>
+        <% end %>
       
       <!--   <td><%= link_to 'Show', message %></td>
         <td><%= link_to 'Edit', edit_message_path(message) %></td>
