@@ -16,6 +16,7 @@
       <li>
         <%= link_to 'ARCHIVE', messages_path(folder: 'archive') %>
       </li>
+
     </ul>
     <div id="signout">
       <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
@@ -61,7 +62,7 @@
    <div id="mail_menu">
     <ul>
       <li>
-        <%= link_to 'Add contact', "#" %>
+        <%= link_to 'Add contact', new_contact_path %>
       </li>
       <li>
         <%= link_to 'Reply to sender', "#" %>

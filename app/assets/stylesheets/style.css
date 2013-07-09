@@ -62,11 +62,13 @@ footer a {
 
 
 nav.main-menu {
+
   margin-top: 60px;
   margin-bottom: 20px;
   font-size: 32px;
-  font-weight: 200;
+  font-weight: 200px;
 }
+
 
 nav.main-menu ul li {
   display: inline-block;
@@ -78,11 +80,7 @@ nav.main-menu ul li a {
   margin-left: 20px;
   color: #f0f0f0;
 }
-nav.main-menu li:first-child
-{ 
-  font-size: 21px;
-  color: white;
-}
+
 
 nav.main-menu ul li a:hover, nav.main-menu ul li.active a {
   color: white;
@@ -340,8 +338,132 @@ div#list_mails :hover{
 div#mail{
   background-color: #f8f8f8;
 }
+div.contact
+{
+  background-color: #f8f8f8;
+}
+.tablecont
+{
+  line-height:120%;
 
 
+}
+.span6 span
+{
+float:right;
+}
+.namecont
+{
+  background-color: white;
 
+}
+.emailcont
+{
+  background-color: white;
+}
+.contact span
+{
+float:right;
+}
+.span12
+{background-color: #FCFFF5;
+  
+}
+.container li
+{
+  text-align: left;
+}
+#id-emails span
+{
+float:right;
 
+}
+.buton
+{float:right;
+  background-color: #468966;
+  padding:5px 8px;
+  font-size:17.5px;
+  -webkit-border-radius:6px;
+  -moz-border-radius:6px;
+  border-radius:6px
+  text-decoration:none;
+  margin-right: 15px;
+}
+.emailw
+{
+  float:center;
+}
+.container td{
+  text-align:center;
+}
+.container  th:nth-child(2){
+  text-align: center;
 
+}
+#read-emails
+{
+margin-right: 30px;
+  float: right;
+}
+#divcont
+
+{ 
+  overflow: auto;
+
+}
+.signout
+{
+  font-size: 15px;
+}
+nav.main-menu
+{
+  height: 140 px;
+}
+.container h1
+{
+  padding-left: 20px;
+}
+div.contactform{
+  
+  background-color: rgba(0,0,0,0.2);
+  width: 800px;
+  height: auto;
+  padding: 45px 80px;
+  border-radius: 8px;
+  color:white;
+}
+.table-hover tbody tr:hover > td,
+.table-hover tbody tr:hover > th {
+  background-color: #363942;
+  opacity: 0.9;
+   border-radius: 8px;
+}
+.contactform border-top-width: {
+  padding-left: 60px;
+}
+.contactform h2
+{
+   
+ display:inline-block; 
+}
+
+.contactform h2:nth-child(2)
+{
+  margin-right:280px; 
+}
+.span6 ul
+{
+  display: inline-block;
+
+}
+
+nav.main-menu
+{width: auto;
+  height: auto;
+float:right;
+margin: 20px;
+}
+.signout
+{margin-top:30px;
+
+}
