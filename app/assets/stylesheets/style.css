@@ -129,7 +129,7 @@ div#folders{
 div#folders ul{
   list-style-type: none;
   margin: 0px;
-  width:500px;
+  width:auto;
   float:left;
 }
 
@@ -258,6 +258,7 @@ div#from_to{
   height:300px;
   border:1px solid #E8E8E8;
   border-right: none;
+  padding: 10px;
 
 }
 div#content{

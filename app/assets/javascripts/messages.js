@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
 	$('#list_mails ul li').eq(0).addClass('active');
-	readText($(this));
+	readElement($(this));
 
 	$('#list_mails ul li').click(function(){
 		$('#list_mails ul li').removeClass('active')
 		$(this).addClass('active');
 
-		readText($(this));
+		readElement($(this));
 
     var messageId = $(this).attr('data-message');
     var url = "http://localhost:3000/messages/" + messageId + ".json";
@@ -28,7 +28,7 @@ $(document).ready(function(){
 				next_email = email_activ.next();
 				$('#list_mails ul li').removeClass('active')
 				next_email.addClass('active');
-				readText(next_email);
+				readElement(next_email);
 			}
 	  };
 
@@ -37,12 +37,19 @@ $(document).ready(function(){
 				prev_email = email_activ.prev();
 				$('#list_mails ul li').removeClass('active')
 				prev_email.addClass('active');
-				readText(prev_email);
+				readElement(prev_email);
 			}
+	  };
+
+	  console.log(param.which);
+
+	  if (param.which == 109){ // m = read message
+	  		mail_to_read = $('#from_to').text();
+	  		readText(mail_to_read);
 	  };
 	});
 
-	function readText(liElement){
+	function readElement(liElement){
 		var spans = liElement.find('a span');
     var textToRead = spans.eq(0).text().replace(/[\n\r]/g, '') + ', ' + spans.eq(1).text().replace(/[\n\r]/g, '');
 
@@ -62,5 +69,25 @@ $(document).ready(function(){
         }
     });
 	}
+
+
+  function readText(textToRead){
+    $.getJSON("http://speech.jtalkplugin.com/api/?callback=?",
+      {
+        speech: textToRead,
+        usecache: "false"
+      },
+      function(json) {
+        if (json.success == true){
+          // Success - perform your audio operations here
+          $('audio#player').attr('src', json.data.url);
+          var audioElement = document.getElementById("player");
+          audioElement.play();
+        } else {
+          // Failure
+        }
+    });
+  }
+
 
 });
