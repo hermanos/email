@@ -17,7 +17,6 @@
         <%= link_to 'ARCHIVE', messages_path(folder: 'archive') %>
       </li>
     </ul>
-    Unread Messages: <%= current_user.messages_with_unread_status %>
     <div id="signout">
       <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
     </div>
