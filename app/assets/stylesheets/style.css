@@ -186,6 +186,7 @@ div#list_mails{
 }
 
 div#list_mails span{
+  color:black;
 	display:block;
 	background-color: transparent;
 }
