@@ -21,12 +21,12 @@
       <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
     </div>
    </div>
-   
+
   <div id="content">
   <div id="list_mails">
 		<ul>
     <% @messages.each do |message| %>
-			<li>
+			<li data-message="<%= message.id %>">
 	      <%= link_to '#' do %>
 	        <% if @current_folder == 'inbox' %>
 	          <span class="maildet">
@@ -47,15 +47,15 @@
 	        <span class="data">
 	          <%= message.created_at %>
 	        </span>
-					
+
 					<hr>
 	       <% end %>
 			</li>
-      
+
       <!--   <td><%= link_to 'Show', message %></td>
         <td><%= link_to 'Edit', edit_message_path(message) %></td>
         <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-     <% end %>     
+     <% end %>
 		 </ul>
    </div>
    <div id="mail_menu">
@@ -83,7 +83,7 @@
 
   <div id="mail">
       <div id="from_to">
-        
+
       </div>
   </div>
 
