@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
   # GET /messages/1.json
   def show
     @message = Message.find(params[:id])
-    @message.update_attribute(:read, 1)
+    @message.update_read_status
 
     respond_to do |format|
       format.html # show.html.erb
