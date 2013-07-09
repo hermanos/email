@@ -5,7 +5,7 @@
        <%= link_to 'COMPOSE', '#' %>
       </li>
       <li>
-        <%= link_to 'INBOX', messages_path(folder: 'inbox') %>
+        <%= link_to "INBOX (#{current_user.messages_with_unread_status})", messages_path(folder: 'inbox') %>
       </li>
       <li>
         <%= link_to 'SENT', messages_path(folder: 'sent') %>
