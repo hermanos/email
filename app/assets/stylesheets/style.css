@@ -301,7 +301,16 @@ div.signupform{
 
 div.signupform label{
   display:inline-block;
+  width:110px;
+}
+
+div.signupform span.inlinefields label{
+  display:inline-block;
   width:100px;
+}
+
+div.signupform span.inlinefields{
+	background-color: transparent;
 }
 
 div.forgotpassform{

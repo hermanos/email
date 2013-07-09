@@ -1,15 +1,25 @@
 $(document).ready(function(){
-	
+
 	$('#list_mails ul li').eq(0).addClass('active');
 	readText($(this));
-	
+
 	$('#list_mails ul li').click(function(){
 		$('#list_mails ul li').removeClass('active')
 		$(this).addClass('active');
-		
+
 		readText($(this));
+
+    var messageId = $(this).attr('data-message');
+    var url = "http://localhost:3000/messages/" + messageId + ".json";
+
+    $.ajax({
+      url: url,
+    }).done(function(data) {
+      $('#from_to').html(data['content']);
+    });
+
 	});
-	
+
 	$(document).keypress(function(param) {
   	email_activ = $('#list_mails ul li.active');
 
@@ -31,7 +41,7 @@ $(document).ready(function(){
 			}
 	  };
 	});
-	
+
 	function readText(liElement){
 		var spans = liElement.find('a span');
     var textToRead = spans.eq(0).text().replace(/[\n\r]/g, '') + ', ' + spans.eq(1).text().replace(/[\n\r]/g, '');
@@ -52,5 +62,5 @@ $(document).ready(function(){
         }
     });
 	}
-	
+
 });
