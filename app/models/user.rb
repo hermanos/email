@@ -36,4 +36,12 @@ class User < ActiveRecord::Base
     (messages_with_sender_tag(tag) + messages_with_receiver_tag(tag)).uniq
   end
 
+  def messages_with_unread_status
+    returned_messages = []
+    received_messages.each do |message|
+      returned_messages << message if message.has_unread_status?
+    end
+    returned_messages.count
+  end
+
 end

@@ -4,6 +4,7 @@ class CreateTags < ActiveRecord::Migration
       t.integer :message_id
       t.string :owner, default: 'sender'
       t.string :title
+      t.integer :read, default: nil
 
       t.timestamps
     end

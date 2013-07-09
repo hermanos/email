@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20130702132235) do
     t.integer  "message_id"
     t.string   "owner",      :default => "sender"
     t.string   "title"
+    t.integer  "read"
     t.datetime "created_at",                       :null => false
     t.datetime "updated_at",                       :null => false
   end
