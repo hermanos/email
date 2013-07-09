@@ -176,7 +176,7 @@ div.messagecontainer{
 div#list_mails{
   font-size: 12px;
   position: absolute;
-  width:350px;
+  width:300px;
   float:left;
   border: 1px solid #E8E8E8;
   border-top:none;
@@ -206,7 +206,7 @@ div#list_mails span{
 }
 
 div#mail{
-  margin-left: 350px;
+  margin-left: 300px;
   margin-right:152px;
   border-right: 1px solid #E8E8E8;
 }
@@ -328,6 +328,11 @@ div.forgotpassform label{
   display:inline-block;
   width: 100px;
 }
+
+div.composeform textarea{
+	width:600px;
+	height:300px;
+}
 div#compose{
   background-color: #D4D9B0;
 }
@@ -336,7 +341,7 @@ div.composeform{
 }
 div.composeform label{
   display:inline-block;
-  width: 200px;
+  width: 100px;
   font-size: 18px;
 }
 div.composeform h1{
