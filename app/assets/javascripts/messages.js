@@ -20,6 +20,19 @@ $(document).ready(function(){
 
 	});
 
+	$('#folders ul li:first-child').click(function(){
+    var url2 = "http://localhost:3000/messages/new";
+
+    $.ajax({
+      url: url2,
+    }).done(function(data) {
+      $('#from_to').html(data);
+			$('#list_mails').hide();
+			$('#mail_menu').hide();
+    });
+
+	});
+	
 	$(document).keypress(function(param) {
   	email_activ = $('#list_mails ul li.active');
 
