@@ -5,7 +5,7 @@
        <%= link_to 'COMPOSE', new_message_path %>
       </li>
       <li>
-        <%= link_to 'INBOX', messages_path(folder: 'inbox') %>
+        <%= link_to "INBOX (#{current_user.messages_with_unread_status})", messages_path(folder: 'inbox') %>
       </li>
       <li>
         <%= link_to 'SENT', messages_path(folder: 'sent') %>
@@ -17,7 +17,6 @@
         <%= link_to 'ARCHIVE', messages_path(folder: 'archive') %>
       </li>
     </ul>
-    Unread Messages: <%= current_user.messages_with_unread_status %>
     <div id="signout">
       <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
     </div>
