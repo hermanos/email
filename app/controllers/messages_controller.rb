@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @messages }
     end
-  end
+  end 
 
   # GET /messages/1
   # GET /messages/1.json

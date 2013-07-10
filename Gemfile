@@ -7,6 +7,8 @@ gem 'rails', '3.2.13'
 
 gem 'mysql2'
 gem 'devise'
+gem 'sidekiq'
+gem "redis", "~> 3.0.4"
 
 
 # Gems used only for assets and not required
