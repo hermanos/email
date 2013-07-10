@@ -169,10 +169,10 @@ div#folders ul li a:hover{
   border-bottom-left-radius: 12px;
 }*/
 div.messagecontainer{
-  margin:10px 20px;
   background-color: #f0f0f0;
-  height:600px;
+  height:640px;
 }
+
 div#list_mails{
   font-size: 12px;
   position: absolute;
@@ -181,7 +181,7 @@ div#list_mails{
   border: 1px solid #E8E8E8;
   border-top:none;
   line-height: 15px;
-  height: 530px;
+  height: 550px;
   overflow: auto;
 }
 
@@ -263,7 +263,7 @@ div#from_to{
 }
 div#content{
   border: 1px black;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 div#list_mails span.data{

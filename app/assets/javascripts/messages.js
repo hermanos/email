@@ -20,15 +20,13 @@ $(document).ready(function(){
 
 	});
 
-	$('#folders ul li:first-child').click(function(){
+	$('#composebutton').click(function(){
     var url2 = "http://localhost:3000/messages/new";
 
     $.ajax({
       url: url2,
     }).done(function(data) {
       $('#from_to').html(data);
-			$('#list_mails').hide();
-			$('#mail_menu').hide();
     });
 
 	});
@@ -53,8 +51,6 @@ $(document).ready(function(){
 				readElement(prev_email);
 			}
 	  };
-
-	  console.log(param.which);
 
 	  if (param.which == 109){ // m = read message
 	  		mail_to_read = $('#from_to').text();
@@ -102,5 +98,17 @@ $(document).ready(function(){
     });
   }
 
+  $("#sendButton").click(function(){
+    var url = $('.composeform form').attr('action');
+
+    $.ajax({
+      type: "post",
+      url: url,
+      data: $(".composeform form").serialize(),
+    }).done(function(){
+        $('.composeform').hide();
+    });
+  
+  });
 
 });
