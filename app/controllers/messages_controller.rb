@@ -45,11 +45,13 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.json
   def create
+    puts "----------------------------------------------"
+    puts params.inspect
+    puts "----------------------------------------------"
     @receiver = User.find_by_email(params[:message][:receiver])
     unless @receiver.nil?
-      @receiver = User.find_by_email(params[:message][:receiver])
       @message = Message.new(sender_id: current_user.id, receiver_id: @receiver.id, subject: params[:message][:subject], content: params[:message][:content])
-
+    end
       respond_to do |format|
         if @message.save
           format.html { redirect_to messages_path, notice: 'Message was successfully created.' }
@@ -59,9 +61,6 @@ class MessagesController < ApplicationController
           format.json { render json: @message.errors, status: :unprocessable_entity }
         end
       end
-    else
-      render m_error_path
-    end
   end
 
   # PUT /messages/1
