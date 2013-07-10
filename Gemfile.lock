@@ -34,6 +34,7 @@ GEM
     builder (3.0.4)
     celluloid (0.14.1)
       timers (>= 1.0.0)
+    chronic (0.9.1)
     connection_pool (1.1.0)
     devise (2.2.4)
       bcrypt-ruby (~> 3.0)
@@ -120,6 +121,9 @@ GEM
     tzinfo (0.3.37)
     warden (1.2.1)
       rack (>= 1.0)
+    whenever (0.8.2)
+      activesupport (>= 2.3.4)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -135,3 +139,4 @@ DEPENDENCIES
   sidekiq
   sinatra
   slim
+  whenever

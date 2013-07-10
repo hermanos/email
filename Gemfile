@@ -11,6 +11,7 @@ gem 'sidekiq'
 gem "redis", "~> 3.0.4"
 gem 'sinatra', require: false
 gem 'slim'
+gem 'whenever'
 
 
 # Gems used only for assets and not required

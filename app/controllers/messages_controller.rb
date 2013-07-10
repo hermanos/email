@@ -47,7 +47,6 @@ class MessagesController < ApplicationController
   def create
     @receiver = User.find_by_email(params[:message][:receiver])
     unless @receiver.nil?
-      @receiver = User.find_by_email(params[:message][:receiver])
       @message = Message.new(sender_id: current_user.id, receiver_id: @receiver.id, subject: params[:message][:subject], content: params[:message][:content])
 
       respond_to do |format|
