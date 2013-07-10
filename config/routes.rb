@@ -9,7 +9,11 @@ Email::Application.routes.draw do
 
   resources :tags
   resources :messages
-
+  
+  require 'sidekiq/web'
+  resources :snippets
+  root to: "snippets#new"
+  mount Sidekiq::Web, at: "/sidekiq"
 
 
   # The priority is based upon order of creation:

@@ -9,6 +9,8 @@ gem 'mysql2'
 gem 'devise'
 gem 'sidekiq'
 gem "redis", "~> 3.0.4"
+gem 'sinatra', require: false
+gem 'slim'
 
 
 # Gems used only for assets and not required
