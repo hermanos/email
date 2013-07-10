@@ -2,7 +2,7 @@
   <div id="folders">
     <ul>
       <li>
-       <%= link_to 'COMPOSE', '#' %>
+       <%= link_to 'COMPOSE', '#', id:'composebutton' %>
       </li>
       <li>
         <%= link_to "INBOX (#{current_user.messages_with_unread_status})", messages_path(folder: 'inbox') %>
