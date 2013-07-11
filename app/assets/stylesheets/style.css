@@ -30,7 +30,6 @@ html.simple a, html.simple a:hover{
 
 span {
   padding: 5px;
-  background-color:rgba(0,100,0,0.5);
   font-size: 13px;
   border-radius:4px;
 	color: white;
@@ -472,8 +471,7 @@ nav.main-menu{
   height: 140 px;
 }
 
-.container h1{
-}
+
 
 div.contactform{
   
@@ -552,4 +550,7 @@ div.field_with_errors input {
 
 div.field label {
   display:block;
+}
+.btn-mini{
+  float:right;
 }
