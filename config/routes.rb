@@ -1,6 +1,9 @@
 Email::Application.routes.draw do
 
 
+  resources :contacts
+
+
   devise_for :users
 
 
