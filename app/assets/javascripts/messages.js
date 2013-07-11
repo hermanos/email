@@ -38,8 +38,9 @@ $(document).ready(function(){
       if (email_activ.next().size() > 0){
         next_email = email_activ.next();
         $('#list_mails ul li').removeClass('active')
-        next_email.addClass('active');
+        next_email.addClass('active');  
         readElement(next_email);
+
       }
     };
 
@@ -97,18 +98,5 @@ $(document).ready(function(){
         }
     });
   }
-
-  // $("#sendButton").click(function(){
-  //    var url = $('.composeform form').attr('action');
-
-  //    $.ajax({
-  //      type: "post",
-  //      url: url,
-  //      data: $(".composeform form").serialize(),
-  //    }).done(function(){
-  //        $('.composeform').hide();
-  //    });
-  
-  //  });
 
 });
