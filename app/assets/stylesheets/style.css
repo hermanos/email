@@ -387,7 +387,6 @@ div#list_mails :hover{
 div#mail{
   background-color: #f8f8f8;
 }
-<<<<<<< HEAD
 div.contact
 {
   background-color: #f8f8f8;
@@ -474,7 +473,6 @@ nav.main-menu{
 }
 
 .container h1{
-  color:;
 }
 
 div.contactform{
@@ -485,10 +483,10 @@ div.contactform{
   padding: 45px 80px;
   border-radius: 8px;
   color:white;
-=======
+}
+
 div.messagecontainer footer{
   margin: 20px 10px 0px;
->>>>>>> b3fa979660f1b7a91fd40a66cc5f22b444d70596
 }
 
 .table-hover tbody tr:hover > td,
@@ -544,9 +542,8 @@ nav.main-menu{
   margin-left: 20px;
 }
 
-div#error_explanation ul {
-  padding-top: 10px;
-  display: none
+div#error_explanation {
+  display: none;
 }
 
 div.field_with_errors input {
