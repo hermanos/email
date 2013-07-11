@@ -1,36 +1,22 @@
 
-
-
-
-<div class="span6">
-
-  <nav class="main-menu">
-   
-      
-      <% if user_signed_in? %>
-     
-         
-   
-         
+  <% if user_signed_in? %>      
+  <strong>  <p id="loginas">
+      Signed in as <%= current_user.email %></strong>
        
-      <%= link_to 'Contacts' ,contacts_path %>
-         
-         <%= link_to 'Messages' ,messages_path %>
-            
-        <span>
-          Signed in as <%= current_user.email %>
-        </span>
+          <span class="signout"> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+          </span>
         
-       <span class="signout"> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %></span>
+    </p> 
           
+  <%end%>
+<div class="span6">
+  <nav class="main-menu">
+      <% if user_signed_in? %>
+          <%= link_to 'Contacts' ,contacts_path %>
+          <%= link_to 'Messages' ,messages_path %>
         <% else %>
-        
-          <%= link_to 'Sign Up', new_user_registration_path %>
-        
-          <%= link_to 'Sign in', new_user_session_path %>
-        
-        <% end %>
-      
-     
+          <%= link_to 'Sign Up', new_user_registration_path %>        
+          <%= link_to 'Sign in', new_user_session_path %>        
+        <% end %>      
   </nav>
 </div>

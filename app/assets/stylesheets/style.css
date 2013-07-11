@@ -17,7 +17,7 @@ hr {
 	opacity: 0.6;
 }
 
-a {
+a {margin-left: 3px;
   color: white;
 }
 a:hover {
@@ -30,8 +30,8 @@ html.simple a, html.simple a:hover{
 
 span {
   padding: 5px;
- /**/
-background-color:rgba(0,100,0,0.5);
+ /*
+background-color:rgba(0,100,0,0.5);*/
   font-size: 13px;
   border-radius:4px;
 	color: white;
@@ -389,40 +389,44 @@ float:right;
   text-decoration:none;
   margin-right: 15px;
 }
+
 .emailw
 {
   float:center;
 }
+
 .container td{
-  text-align:center;
+  text-align:left;
+  list-style-type: none;
 }
+
 .container  th:nth-child(2){
   text-align: center;
 
 }
-#read-emails
-{
-margin-right: 30px;
+
+#read-emails{
+  margin-right: 30px;
   float: right;
 }
-#divcont
 
-{ 
+#divcont{ 
   overflow: auto;
-
 }
-.signout
-{
+
+.signout{
   font-size: 15px;
 }
-nav.main-menu
-{
+
+nav.main-menu{
+ 
   height: 140 px;
 }
-.container h1
-{
-  padding-left: 20px;
+
+.container h1{
+  color:;
 }
+
 div.contactform{
   
   background-color: rgba(0,0,0,0.2);
@@ -432,38 +436,70 @@ div.contactform{
   border-radius: 8px;
   color:white;
 }
+
 .table-hover tbody tr:hover > td,
 .table-hover tbody tr:hover > th {
   background-color: #363942;
   opacity: 0.9;
-   border-radius: 8px;
+  border-radius: 8px;
 }
+
 .contactform border-top-width: {
   padding-left: 60px;
 }
-.contactform h2
-{
-   
+
+.contactform h2{  
  display:inline-block; 
 }
 
-.contactform h2:nth-child(2)
-{
-  margin-right:280px; 
+.contactform h2:nth-child(2){
+  margin-right:60px; 
 }
-.span6 ul
-{
+
+.span6 ul{
   display: inline-block;
 
 }
 
-nav.main-menu
-{width: auto;
+nav.main-menu{
+  width: auto;
   height: auto;
-float:right;
-margin: 20px;
+  float:right;
+  margin: 20px;
 }
-.signout
-{margin-top:30px;
+.signout{
+  margin-top:30px;
+}
 
+#butonedit{
+  float:right;
+  margin-right: 10px;
+}
+
+#loginas {
+  float: right;
+  margin-right: 30px;
+  padding: 5px;
+  background-color: rgba(56, 78, 56, 0.5);
+  font-size: 13px;
+  border-radius: 4px;
+  color: white;
+}
+
+.main-menu a
+{
+  margin-left: 20px;
+}
+
+div#error_explanation ul {
+  padding-top: 10px;
+  display: none
+}
+
+div.field_with_errors input {
+  border: 1px solid red;
+}
+
+div.field label {
+  display:block;
 }

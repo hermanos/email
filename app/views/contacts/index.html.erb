@@ -1,8 +1,12 @@
 
 
 <div class="contactform">
-  <h1>Contacts
-        <span class="btn btn-success btn-large" id="read-emails">
+
+
+
+
+  <h1>
+        <span class="btn btn-primary btn-large" id="read-emails">
           <%= link_to 'New Contact', new_contact_path %>
         </span></h1>
         
@@ -22,10 +26,10 @@
             <td>
               <%= contact.email %>
                 
-                <span class="buton" id="read-emails">
+                <span class="btn btn-primary btn-mini" class="read-emails">
                           <%= link_to 'Delete', contact, method: :delete, data: { confirm: 'Are you sure?' }%>
                 </span>
-                <span class="buton" id="read-emails">
+                <span class="btn btn-primary btn-mini " class="butonedit" >
                          <%= link_to 'Edit', edit_contact_path(contact) %>
                 </span>
             </td>
