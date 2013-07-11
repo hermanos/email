@@ -51,7 +51,7 @@ class MessagesController < ApplicationController
     @receiver = User.find_by_email(params[:message][:receiver])
     unless @receiver.nil?
       @message = Message.new(sender_id: current_user.id, receiver_id: @receiver.id, subject: params[:message][:subject], content: params[:message][:content])
-    end
+
       respond_to do |format|
         if @message.save
           format.html { redirect_to messages_path, notice: 'Message was successfully created.' }
@@ -61,6 +61,7 @@ class MessagesController < ApplicationController
           format.json { render json: @message.errors, status: :unprocessable_entity }
         end
       end
+    end
   end
 
   # PUT /messages/1
