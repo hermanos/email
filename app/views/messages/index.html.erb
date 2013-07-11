@@ -1,4 +1,7 @@
 <div class="messagecontainer">
+  <div id="signedin">
+    Signed in as <%= current_user.email %>
+  </div>
   <div id="folders">
     <ul>
       <li>
@@ -18,46 +21,38 @@
       </li>
     </ul>
     <div id="signout">
-      <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
     </div>
    </div>
-
+ 
   <div id="content">
-  <div id="list_mails">
-		<ul>
-    <% @messages.each do |message| %>
-			<li data-message="<%= message.id %>">
-	      <%= link_to '#' do %>
-	        <% if @current_folder == 'inbox' %>
-	          <span class="maildet">
-	            From:
-	             <%= message.sender.email %>
-	          </span>
-	        <% else %>
-            <span class="maildet">
-              To:
-               <%= message.receiver.email %>
-            </span>
-	        <% end %>
+    <div id="list_mails">
+  		<ul>
+      <% @messages.each do |message| %>
+  			<li data-message="<%= message.id %>">
+  	      <%= link_to '#' do %>
+  	        <% if @current_folder == 'inbox' %>
+  	          <span class="maildet">
+  	            From:
+  	             <%= message.sender.email %>
+  	          </span>
+  	        <% else %>
+              <span class="maildet">
+                To:
+                 <%= message.receiver.email %>
+              </span>
+  	        <% end %>
 
-					<span class="maildet">
-          	Subject:
-          	<%= message.subject %>
-					</span>
-	        <span class="data">
-	          <%= message.created_at %>
-	        </span>
+  					<span class="subjectdet">
+            	<%= message.subject %>  <span class="data"><%= message.created_at %></span>
+  					</span>
+  	        <hr>
+  	       <% end %>
+  			</li>
 
-					<hr>
-	       <% end %>
-			</li>
-
-      <!--   <td><%= link_to 'Show', message %></td>
-        <td><%= link_to 'Edit', edit_message_path(message) %></td>
-        <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-     <% end %>
-		 </ul>
-   </div>
+       <% end %>
+  		 </ul>
+     </div>
    <div id="mail_menu">
     <ul>
       <li>
@@ -79,13 +74,18 @@
         <%= link_to 'Move', "#" %>
       </li>
     </ul>
-  </div>
+   </div>
 
-  <div id="mail">
+    <div id="mail">
       <div id="from_to">
 
       </div>
+    </div>
   </div>
-
-</div>
+<footer>
+  <div class="pull-left">&copy; Email</div>
+  <div class="pull-right">  Contact:
+      <a href="mailto:email.forvisuallyimpaired@example.com">
+        email.forvisuallyimpaired@example.com</div>
+</footer>
 </div>
