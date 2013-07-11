@@ -153,13 +153,13 @@ div#folders ul li a{
   border-radius: 3px;
   margin-left: 5px;
   background: rgb(238,243,230); /* Old browsers */
-background: -moz-linear-gradient(top, rgba(238,243,230,1) 0%, rgba(223,229,215,1) 40%, rgba(208,215,201,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,243,230,1)), color-stop(40%,rgba(223,229,215,1)), color-stop(100%,rgba(208,215,201,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(238,243,230,1) 0%,rgba(223,229,215,1) 40%,rgba(208,215,201,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(238,243,230,1) 0%,rgba(223,229,215,1) 40%,rgba(208,215,201,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(238,243,230,1) 0%,rgba(223,229,215,1) 40%,rgba(208,215,201,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom, rgba(238,243,230,1) 0%,rgba(223,229,215,1) 40%,rgba(208,215,201,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eef3e6', endColorstr='#d0d7c9',GradientType=0 ); /* IE6-9 */
+  background: -moz-linear-gradient(top, rgba(238,243,230,1) 0%, rgba(223,229,215,1) 40%, rgba(208,215,201,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,243,230,1)), color-stop(40%,rgba(223,229,215,1)), color-stop(100%,rgba(208,215,201,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(238,243,230,1) 0%,rgba(223,229,215,1) 40%,rgba(208,215,201,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(238,243,230,1) 0%,rgba(223,229,215,1) 40%,rgba(208,215,201,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(238,243,230,1) 0%,rgba(223,229,215,1) 40%,rgba(208,215,201,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(238,243,230,1) 0%,rgba(223,229,215,1) 40%,rgba(208,215,201,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eef3e6', endColorstr='#d0d7c9',GradientType=0 ); /* IE6-9 */
 }
 
 div#folders #composebutton{
@@ -179,7 +179,7 @@ div#folders ul li a:hover{
 
 div.messagecontainer{
   background-color: #f0f0f0;
-  height:640px;
+  height:650px;
 }
 
 div#list_mails{
@@ -190,7 +190,7 @@ div#list_mails{
   border: 1px solid #E8E8E8;
   border-top:none;
   line-height: 15px;
-  height: 520px;
+  height: 530px;
   overflow: auto;
 }
 
@@ -209,6 +209,7 @@ div#list_mails span{
 #list_mails ul {
 	margin-left:5px;
 	list-style-type:none;
+  
 }
 
 #list_mails ul li.active {
@@ -281,7 +282,7 @@ div#signout a:hover{
 
 div#from_to{
   width:100%;
-  height: 500px;
+  height: 510px;
   border:1px solid #E8E8E8;
   border-right: none;
   padding: 10px;
@@ -296,6 +297,11 @@ div#list_mails span.data{
   font-size: 10px;
 	margin-left:5px;
   display: inline-block;
+  float: right;
+}
+
+div#list_mails span.subjectdet{
+  display: block;
 
 }
 
