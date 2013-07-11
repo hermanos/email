@@ -29,9 +29,15 @@ html.simple a, html.simple a:hover{
 }
 
 span {
+<<<<<<< HEAD
   padding: 5px;
  /*
 background-color:rgba(0,100,0,0.5);*/
+=======
+  
+ /**/
+  background-color:rgba(0,100,0,0.5);
+>>>>>>> b3fa979660f1b7a91fd40a66cc5f22b444d70596
   font-size: 13px;
   border-radius:4px;
 	color: white;
@@ -118,16 +124,23 @@ div#content{
 
 div#folders{
   
-  padding-top:20px;
+  padding: 30px 0px 5px;
   height: 30px;
   margin:0;
-  background-color: #D4D9B0;
+  background: rgb(211,224,169); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(211,224,169,1) 0%, rgba(171,189,115,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(211,224,169,1)), color-stop(100%,rgba(171,189,115,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(211,224,169,1) 0%,rgba(171,189,115,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(211,224,169,1) 0%,rgba(171,189,115,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(211,224,169,1) 0%,rgba(171,189,115,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(211,224,169,1) 0%,rgba(171,189,115,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3e0a9', endColorstr='#abbd73',GradientType=0 ); /* IE6-9 */
 }
 
 div#folders ul{
   list-style-type: none;
   margin: 0px;
-  width:500px;
+  width:auto;
   float:left;
 }
 
@@ -139,42 +152,48 @@ div#folders ul li{
 div#folders ul li a{
   font-size: 14px;
   font-family:Helvetica, Arial, sans-serif;
-  background-color: #F3F3F3;
   text-decoration: none;
   padding: 5px 10px;
   border-color: #C8C8C8;
   border-style: solid;
   border-width: 1px ;
-  text-shadow: 1px 1px 1px gray;
+  text-shadow: 1px 0px 1px rgba(150, 150, 150, 1);
   border-radius: 3px;
   margin-left: 5px;
+  background: rgb(238,243,230); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(238,243,230,1) 0%, rgba(223,229,215,1) 40%, rgba(208,215,201,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,243,230,1)), color-stop(40%,rgba(223,229,215,1)), color-stop(100%,rgba(208,215,201,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(238,243,230,1) 0%,rgba(223,229,215,1) 40%,rgba(208,215,201,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(238,243,230,1) 0%,rgba(223,229,215,1) 40%,rgba(208,215,201,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(238,243,230,1) 0%,rgba(223,229,215,1) 40%,rgba(208,215,201,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(238,243,230,1) 0%,rgba(223,229,215,1) 40%,rgba(208,215,201,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eef3e6', endColorstr='#d0d7c9',GradientType=0 ); /* IE6-9 */
 }
-div#folders ul li:first-child{
-  margin-right: 50px;
+
+div#folders #composebutton{
+  margin-right: 190px;
 }
 
 div#folders ul li a:hover{
-  background-color: #E8E8E8;
+  background: rgb(213,220,206); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(213,220,206,1) 0%, rgba(223,229,215,1) 40%, rgba(179,190,173,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(213,220,206,1)), color-stop(40%,rgba(223,229,215,1)), color-stop(100%,rgba(179,190,173,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(213,220,206,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(213,220,206,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(213,220,206,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(213,220,206,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5dcce', endColorstr='#b3bead',GradientType=0 ); /* IE6-9 */
 }
 
-
-/*#folders a:first-child{
-  -webkit-border-bottom-left-radius: 12px;
-  -webkit-border-top-left-radius: 12px;  
-  -moz-border-radius-topleft: 12px;
-  -moz-border-radius-bottomleft: 12px;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-}*/
 div.messagecontainer{
-  margin:10px 20px;
   background-color: #f0f0f0;
-  height:600px;
+  height:650px;
 }
+
 div#list_mails{
   font-size: 12px;
   position: absolute;
-  width:350px;
+  width:300px;
   float:left;
   border: 1px solid #E8E8E8;
   border-top:none;
@@ -184,6 +203,8 @@ div#list_mails{
 }
 
 div#list_mails span{
+  color:black;
+  padding: 0px 5px;
 	display:block;
 	background-color: transparent;
 }
@@ -196,14 +217,22 @@ div#list_mails span{
 #list_mails ul {
 	margin-left:5px;
 	list-style-type:none;
+  
 }
 
 #list_mails ul li.active {
-	background-color: #D4D9B0;
+	background: rgb(209,222,166); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(209,222,166,1) 1%, rgba(188,204,138,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(209,222,166,1)), color-stop(100%,rgba(188,204,138,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(209,222,166,1) 1%,rgba(188,204,138,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(209,222,166,1) 1%,rgba(188,204,138,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(209,222,166,1) 1%,rgba(188,204,138,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(209,222,166,1) 1%,rgba(188,204,138,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1dea6', endColorstr='#bccc8a',GradientType=0 ); /* IE6-9 */
 }
 
 div#mail{
-  margin-left: 350px;
+  margin-left: 300px;
   margin-right:152px;
   border-right: 1px solid #E8E8E8;
 }
@@ -228,10 +257,12 @@ div#mail_menu ul li a, div#mail_menu ul li a:hover{
 div#mail_menu ul li a{
   background-color:#F0F0F0;
 	margin-left:5px;
+  line-height: 30px;
+  font-size: 14px;
 }
 
 div#mail_menu ul li a:hover{
-  background-color: #F8F8F8;
+  background-color: #f5f5f5;
 }
 
 div#compose{
@@ -240,31 +271,46 @@ div#compose{
     padding-top: 7px;
 }
 
+div#signedin{
+  float:right;
+  padding-top: 5px;
+  margin-right: 20px;
+}
+
 div#signout{
   float:right;
-  width: 70px;
-}
+  width: 50px;
+  margin-right: 20px;
+text-shadow: 1px 0px 1px rgba(150, 150, 150, 1);}
 
 div#signout a:hover{
   text-decoration: none;
-
+  color: #4f4f4f;
 }
 
 div#from_to{
   width:100%;
-  height:300px;
+  height: 510px;
   border:1px solid #E8E8E8;
   border-right: none;
+  padding: 10px;
 
 }
 div#content{
   border: 1px black;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 div#list_mails span.data{
   font-size: 10px;
 	margin-left:5px;
+  display: inline-block;
+  float: right;
+}
+
+div#list_mails span.subjectdet{
+  display: block;
+
 }
 
 h2.formtitle{
@@ -298,7 +344,16 @@ div.signupform{
 
 div.signupform label{
   display:inline-block;
+  width:110px;
+}
+
+div.signupform span.inlinefields label{
+  display:inline-block;
   width:100px;
+}
+
+div.signupform span.inlinefields{
+	background-color: transparent;
 }
 
 div.forgotpassform{
@@ -315,6 +370,11 @@ div.forgotpassform label{
   display:inline-block;
   width: 100px;
 }
+
+div.composeform textarea{
+	width:600px;
+	height:300px;
+}
 div#compose{
   background-color: #D4D9B0;
 }
@@ -323,21 +383,20 @@ div.composeform{
 }
 div.composeform label{
   display:inline-block;
-  width: 200px;
+  width: 100px;
   font-size: 18px;
 }
 div.composeform h1{
   font-size: 28px;
 }
-div#mail #from_to{
-  height: 530px;
-}
+
 div#list_mails :hover{
   text-decoration: none;
 }
 div#mail{
   background-color: #f8f8f8;
 }
+<<<<<<< HEAD
 div.contact
 {
   background-color: #f8f8f8;
@@ -435,6 +494,10 @@ div.contactform{
   padding: 45px 80px;
   border-radius: 8px;
   color:white;
+=======
+div.messagecontainer footer{
+  margin: 20px 10px 0px;
+>>>>>>> b3fa979660f1b7a91fd40a66cc5f22b444d70596
 }
 
 .table-hover tbody tr:hover > td,

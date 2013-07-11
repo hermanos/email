@@ -18,6 +18,7 @@ class MessagesController < ApplicationController
   # GET /messages/1.json
   def show
     @message = Message.find(params[:id])
+    @message.update_read_status
 
     respond_to do |format|
       format.html # show.html.erb
@@ -44,9 +45,11 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.json
   def create
+    puts "----------------------------------------------"
+    puts params.inspect
+    puts "----------------------------------------------"
     @receiver = User.find_by_email(params[:message][:receiver])
     unless @receiver.nil?
-      @receiver = User.find_by_email(params[:message][:receiver])
       @message = Message.new(sender_id: current_user.id, receiver_id: @receiver.id, subject: params[:message][:subject], content: params[:message][:content])
 
       respond_to do |format|
@@ -58,8 +61,6 @@ class MessagesController < ApplicationController
           format.json { render json: @message.errors, status: :unprocessable_entity }
         end
       end
-    else
-      render m_error_path
     end
   end
 
