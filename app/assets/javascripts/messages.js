@@ -20,7 +20,9 @@ $(document).ready(function(){
 
   });
 
-  $('#composebutton').click(function(){
+  $('#composebutton').click(function(e){
+    e.preventDefault();
+    e.stopPropagation();
     var url2 = "http://localhost:3000/messages/new";
 
     $.ajax({
@@ -98,17 +100,19 @@ $(document).ready(function(){
     });
   }
 
-  // $("#sendButton").click(function(){
-  //    var url = $('.composeform form').attr('action');
+   $("#sendButton").click(function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      var url = $('.composeform form').attr('action');
 
-  //    $.ajax({
-  //      type: "post",
-  //      url: url,
-  //      data: $(".composeform form").serialize(),
-  //    }).done(function(){
-  //        $('.composeform').hide();
-  //    });
+      $.ajax({
+        type: "post",
+        url: url,
+        data: $(".composeform form").serialize(),
+      }).done(function(){
+          $('.composeform').hide();
+      });
   
-  //  });
+    });
 
 });
