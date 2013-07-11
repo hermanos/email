@@ -29,20 +29,11 @@ html.simple a, html.simple a:hover{
 }
 
 span {
-<<<<<<< HEAD
   padding: 5px;
- /*
-background-color:rgba(0,100,0,0.5);*/
-=======
-  
- /**/
   background-color:rgba(0,100,0,0.5);
->>>>>>> b3fa979660f1b7a91fd40a66cc5f22b444d70596
   font-size: 13px;
   border-radius:4px;
 	color: white;
-
-
 }
 
 footer {
@@ -549,8 +540,7 @@ nav.main-menu{
   color: white;
 }
 
-.main-menu a
-{
+.main-menu a{
   margin-left: 20px;
 }
 
