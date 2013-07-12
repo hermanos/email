@@ -29,11 +29,7 @@ html.simple a, html.simple a:hover{
 }
 
 span {
-<<<<<<< HEAD
-  background-color:rgba(0,100,0,0.5);
-=======
   padding: 5px;
->>>>>>> 45fcd62608256836ef66fec4358cee9fc22d6957
   font-size: 13px;
   border-radius:4px;
 	color: white;
@@ -61,7 +57,6 @@ footer a {
 }
 
 nav.main-menu {
-
   margin-top: 60px;
   margin-bottom: 20px;
   font-size: 32px;
@@ -292,9 +287,9 @@ div#signedin{
 
 div#signout{
   float:right;
-  width: 50px;
-  margin-right: 20px;
-text-shadow: 1px 0px 1px rgba(150, 150, 150, 1);}
+  width: 70px;
+  text-shadow: 1px 0px 1px rgba(150, 150, 150, 1);
+}
 
 div#signout a:hover{
   text-decoration: none;
@@ -494,10 +489,6 @@ div.contactform{
   padding: 45px 80px;
   border-radius: 8px;
   color:white;
-}
-
-div.messagecontainer footer{
-  margin: 20px 10px 0px;
 }
 
 .table-hover tbody tr:hover > td,
