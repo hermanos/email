@@ -17,11 +17,13 @@ hr {
 	opacity: 0.6;
 }
 
-a {margin-left: 3px;
-  color: white;
+a {
+  margin-left: 3px;
+  color: #f0f0f0;
 }
 a:hover {
   color: white;
+  text-decoration: none;
 }
 
 html.simple a, html.simple a:hover{
@@ -61,6 +63,8 @@ nav.main-menu {
   margin-bottom: 20px;
   font-size: 32px;
   font-weight: 200px;
+  float:right;
+  height: 140 px;
 }
 
 
@@ -73,6 +77,7 @@ nav.main-menu ul li a {
   line-height: 40px;
   margin-left: 20px;
   color: #f0f0f0;
+ 
 }
 
 nav.main-menu ul li a:hover, nav.main-menu ul li.active a {
@@ -176,11 +181,7 @@ div#folders ul li a:hover{
 
 div.messagecontainer{
   background-color: #f0f0f0;
-  height:650px;
-}
-
-div.messagecontainer footer{
-  margin: 20px 10px 0px;
+  height:640px;
 }
 
 div#list_mails{
@@ -195,7 +196,7 @@ div#list_mails{
   overflow: auto;
 }
 
-div#list_mails :hover{
+div#list_mails:hover{
   text-decoration: none;
 }
 
@@ -380,7 +381,7 @@ div.composeform textarea{
 div.composeform label{
   display:inline-block;
   width: 100px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 div.composeform h1{
@@ -474,10 +475,6 @@ float:right;
   font-size: 15px;
 }
 
-nav.main-menu{
- 
-  height: 140 px;
-}
 
 
 
@@ -515,11 +512,6 @@ div.contactform{
 
 }
 
-nav.main-menu{
-  width: auto;
-  height: auto;
-  float:right;
-}
 .signout{
   margin-top:30px;
 }
@@ -531,7 +523,6 @@ nav.main-menu{
 
 #loginas {
   float: right;
-  margin-right: 30px;
   padding: 5px;
   background-color: rgba(56, 78, 56, 0.5);
   font-size: 13px;
@@ -543,12 +534,6 @@ nav.main-menu{
 
 
 
-
-
-.main-menu a{
-  margin-left: 20px;
-}
-
 div#error_explanation {
   display: none;
 }
@@ -557,9 +542,6 @@ div.field_with_errors input {
   border: 1px solid red;
 }
 
-div.field label {
-  display:block;
-}
 .btn-mini{
   float:right;
 }
