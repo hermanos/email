@@ -201,9 +201,9 @@ div#list_mails:hover{
 }
 
 div#list_mails span{
-  color:black;
+  color: black;
   padding: 0px 5px;
-	display:block;
+	display: block;
 	background-color: transparent;
 }
 
@@ -214,10 +214,14 @@ div#list_mails span.data{
   float: right;
 }
 
-div#list_mails span.subjectdet{
+div#list_mails li a{
+  margin-left: 0px;
+}
+
+/*div#list_mails span.maildet{
   display: block;
 
-}
+}*/
 
 
 div#list_mails hr{

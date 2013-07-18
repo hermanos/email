@@ -31,7 +31,7 @@
   		<ul>
       <% @messages.each do |message| %>
   			<li data-message="<%= message.id %>">
-  	 <!--      <%= link_to '#' do %> -->
+  	       <%= link_to '#' do %>
   	        <% if @current_folder == 'inbox' %>
   	          <span class="maildet">
   	            From:
@@ -44,7 +44,7 @@
               </span>
   	        <% end %>
 
-  					<span class="subjectdet">
+  					<span class="maildet">
             	<%= message.subject %>  
                 <span class="data">
                   <%= message.created_at %>

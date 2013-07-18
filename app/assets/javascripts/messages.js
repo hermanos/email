@@ -64,7 +64,6 @@ $(document).ready(function(){
   function readElement(liElement){
     var spans = liElement.find('a span');
     var textToRead = spans.eq(0).text().replace(/[\n\r]/g, '') + ', ' + spans.eq(1).text().replace(/[\n\r]/g, '');
-
     $.getJSON("http://speech.jtalkplugin.com/api/?callback=?",
       {
         speech: textToRead,
