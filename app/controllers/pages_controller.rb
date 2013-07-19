@@ -6,10 +6,19 @@ class PagesController < ApplicationController
   end
 
   def example
-    @messages = Message.all
+    @messages = Message.limit(4).all
     respond_to do |format|
       format.html { render text: 'messages' }
-      format.json { render json: @messages }
+      format.json do
+        messages = []
+
+        @messages.each do |message|
+          messages << {subject: message.subject, content: message.content, created_at: message.created_at.strftime('%F %T'),
+            from: message.sender.email, to: message.receiver.email}
+        end
+
+        render json: messages
+      end
     end
   end
 end

@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   has_many :received_messages, :class_name => 'Message', :foreign_key => 'receiver_id'
 
   def messages
-  	(sent_messages + received_messages).uniq  	
+  	(sent_messages + received_messages).uniq
   end
 
   def messages_with_sender_tag(tag)
