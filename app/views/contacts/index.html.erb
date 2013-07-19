@@ -1,19 +1,14 @@
-
-
 <div class="contactform">
-
-
-
-
-  <h1>
-        <span class="btn btn-primary btn-large" id="read-emails">
+	 <h1>
+        <span class="btn btn-success btn-large" id="read-emails">
           <%= link_to 'New Contact', new_contact_path %>
-        </span></h1>
+        </span>
+	</h1>
         
-        <h2>Name</h2>
-        <h2>Email</h2>
+  <h2>Name</h2>
+  <h2>Email</h2>
       
-    <table class="table table-hover">
+   <table class="table table-hover">
       
         <ul>
           <% @contacts.each do |contact| %>
@@ -26,10 +21,10 @@
             <td>
               <%= contact.email %>
                 
-                <span class="btn btn-primary btn-mini" class="read-emails">
+                <span class="btn btn-success btn-small" class="read-emails">
                           <%= link_to 'Delete', contact, method: :delete, data: { confirm: 'Are you sure?' }%>
                 </span>
-                <span class="btn btn-primary btn-mini " class="butonedit" >
+                <span class="btn btn-success btn-small " class="butonedit" >
                          <%= link_to 'Edit', edit_contact_path(contact) %>
                 </span>
             </td>

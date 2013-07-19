@@ -53,14 +53,14 @@ footer a {
   width: 200px;
   height: 60px;
   background-image:url("logo.png");
-  margin-top: 60px;
-  margin-bottom: 80px;
+  margin-top: 75px;
+  margin-bottom: 60px;
   background-repeat: no-repeat;
 }
 
 nav.main-menu {
   margin-top: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   font-size: 32px;
   font-weight: 200;
   float: right;
@@ -369,6 +369,22 @@ div.forgotpassform label{
   width: 100px;
 }
 
+div.contactform h2{
+	font-weight:normal;
+}
+
+div.contactback{
+	margin-left:100px;
+}
+
+div.actions{
+	margin-left:100px;
+}
+
+div.editback{
+	margin-left: 100px;
+}
+
 div#compose{
   background-color: #D4D9B0;
 }
@@ -391,10 +407,6 @@ div.composeform label{
 div.composeform h1{
   font-size: 28px;
 }
-
-
-
-
 
 div#mail{
   background-color: #f8f8f8;
@@ -452,10 +464,6 @@ float:right;
   margin-right: 15px;
 }
 
-.emailw
-{
-}
-
 .container td{
   text-align:left;
   list-style-type: none;
@@ -467,7 +475,7 @@ float:right;
 }
 
 #read-emails{
-  margin-right: 30px;
+  margin-right: 5px;
   float: right;
 }
 
@@ -479,12 +487,13 @@ float:right;
   font-size: 15px;
 }
 
-
-
+#read-email{
+	display: inline-block;
+	margin-right: 30px;
+}
 
 div.contactform{
-
-  background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0,0,0,0.2);
   width: 800px;
   height: auto;
   padding: 45px 80px;
@@ -494,8 +503,8 @@ div.contactform{
 
 .table-hover tbody tr:hover > td,
 .table-hover tbody tr:hover > th {
-  background-color: #363942;
-  opacity: 0.9;
+  background-color: transparent;
+  
   border-radius: 8px;
 }
 
@@ -530,13 +539,10 @@ div.contactform{
   padding: 5px;
   background-color: rgba(56, 78, 56, 0.5);
   font-size: 13px;
-  border-radius: 4px;
+  border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
   color: white;
 }
-
-
-
-
 
 div#error_explanation {
   display: none;
@@ -546,6 +552,7 @@ div.field_with_errors input {
   border: 1px solid red;
 }
 
-.btn-mini{
+.btn-small{
   float:right;
+	margin-left:30px;
 }
