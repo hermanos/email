@@ -38,6 +38,8 @@ GEM
       railties (~> 3.1)
       warden (~> 1.2.1)
     erubis (2.7.0)
+    execjs (1.4.0)
+      multi_json (~> 1.0)
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
@@ -102,6 +104,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
+    uglifier (2.1.1)
+      execjs (>= 0.3.0)
+      multi_json (~> 1.0, >= 1.0.2)
     unicorn (4.6.2)
       kgio (~> 2.6)
       rack
@@ -121,4 +126,5 @@ DEPENDENCIES
   mysql2
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
+  uglifier (>= 1.0.3)
   unicorn
