@@ -10,7 +10,7 @@ $(document).ready(function(){
     readElement($(this));
 
     var messageId = $(this).attr('data-message');
-    var url = "http://localhost:3000/messages/" + messageId + ".json";
+    var url = "/messages/" + messageId + ".json";
 
     $.ajax({
       url: url,
@@ -23,7 +23,7 @@ $(document).ready(function(){
   $('#composebutton').click(function(e){
     e.preventDefault();
     e.stopPropagation();
-    var url2 = "http://localhost:3000/messages/new";
+    var url2 = "/messages/new";
 
     $.ajax({
       url: url2,
@@ -32,7 +32,7 @@ $(document).ready(function(){
     });
 
   });
-  
+
   $(document).keypress(function(param) {
     email_activ = $('#list_mails ul li.active');
 
@@ -40,7 +40,7 @@ $(document).ready(function(){
       if (email_activ.next().size() > 0){
         next_email = email_activ.next();
         $('#list_mails ul li').removeClass('active')
-        next_email.addClass('active');  
+        next_email.addClass('active');
         readElement(next_email);
 
       }
@@ -112,7 +112,7 @@ $(document).ready(function(){
       }).done(function(){
           $('.composeform').hide();
       });
-  
+
     });
 
 });
