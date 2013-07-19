@@ -10,6 +10,8 @@ Email::Application.routes.draw do
   match 'home', :to=>'pages#index'
   get "messages/message_error", as: 'm_error'
 
+  get 'pages/example'
+
   resources :tags
   resources :messages
 
