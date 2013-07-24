@@ -20,3 +20,4 @@ end
 
 gem 'mina'
 gem 'mina_extensions'
+gem 'quiet_assets', :group => :development

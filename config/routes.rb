@@ -4,8 +4,7 @@ Email::Application.routes.draw do
   resources :contacts
 
 
-  devise_for :users
-
+  devise_for :users, :controllers => {:sessions => 'sessions'}
 
   match 'home', :to=>'pages#index'
   get "messages/message_error", as: 'm_error'
@@ -14,7 +13,12 @@ Email::Application.routes.draw do
 
   resources :tags
   resources :messages
+  resources :tokens
 
+   devise_scope :user do
+      post 'sessions' => 'sessions#create', :as => 'login'
+      delete 'sessions' => 'sessions#destroy', :as => 'logout'
+    end
 
 
   # The priority is based upon order of creation:
