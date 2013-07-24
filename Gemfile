@@ -21,3 +21,5 @@ group :assets do
 
   #v gem 'uglifier', '>= 1.0.3'
 end
+
+gem 'quiet_assets', :group => :development

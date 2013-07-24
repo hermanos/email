@@ -1,6 +1,5 @@
 class Api::SessionsController < Devise::SessionsController
 	 skip_before_filter :verify_authenticity_token
-                     
 
   respond_to :json
 
@@ -18,7 +17,7 @@ class Api::SessionsController < Devise::SessionsController
     render :status => 200,
            :json => { :success => true,
                       :info => "Logged out",
-                      :data => {} }	
+                      :data => {} }
   end
 
   def failure
