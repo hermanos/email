@@ -6,10 +6,6 @@ class MessagesController < ApplicationController
   # GET /messages.json
   def index
     @current_folder = params[:folder] || 'inbox'
-    # TODO: fix this
-    if params[:current_user]
-      current_user = User.find(params[:current_user])
-    end
     @messages = current_user.own_messages_with_tag(@current_folder).sort_by { |message| message.created_at }.reverse
 
     respond_to do |format|
