@@ -1,16 +1,35 @@
 class MessagesController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, except: [:index, :show]
   layout 'simple'
 
   # GET /messages
   # GET /messages.json
   def index
     @current_folder = params[:folder] || 'inbox'
+    # TODO: fix this
+    if params[:current_user]
+      current_user = User.find(params[:current_user])
+    end
     @messages = current_user.own_messages_with_tag(@current_folder).sort_by { |message| message.created_at }.reverse
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @messages }
+      format.json do
+        messages = []
+
+        @messages.each do |message|
+          messages << {
+            subject: message.subject,
+            content: message.content,
+            created_at: message.created_at.strftime('%F %T'),
+            from: message.sender.email,
+            to: message.receiver.email,
+            id: message.id
+          }
+        end
+
+        render json: messages
+      end
     end
   end
 

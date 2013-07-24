@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   before_save :ensure_authentication_token
 
   def messages
-  	(sent_messages + received_messages).uniq  	
+  	(sent_messages + received_messages).uniq
   end
 
   def messages_with_sender_tag(tag)
