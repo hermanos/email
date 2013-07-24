@@ -15,9 +15,11 @@ Email::Application.routes.draw do
 
 namespace :api do
    devise_scope :user do
-      post 'sessions' => 'sessions#create', :as => 'login'
-      delete 'sessions' => 'sessions#destroy', :as => 'logout'
-      post 'registrations' => 'registrations#create', :as => 'register'
+      post 'signin' => 'sessions#create', :as => 'login'
+      delete 'signout' => 'sessions#destroy', :as => 'logout'
+      post 'signup' => 'registrations#create', :as => 'register'
+      post 'setstage' => 'users#set_stage'
+      get 'getstage' => 'users#get_stage'
     end
   end
 
