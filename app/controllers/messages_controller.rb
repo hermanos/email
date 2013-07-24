@@ -25,6 +25,7 @@ class MessagesController < ApplicationController
             from: message.sender.email,
             to: message.receiver.email,
             id: message.id
+            folder: @current_folder
           }
         end
 
