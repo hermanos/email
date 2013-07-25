@@ -11,12 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130724104639) do
+ActiveRecord::Schema.define(:version => 20130725102441) do
 
   create_table "contacts", :force => true do |t|
     t.string   "name"
     t.string   "email"
     t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "emails", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "folder"
+    t.string   "msg_id"
+    t.string   "from"
+    t.string   "to"
+    t.string   "cc"
+    t.string   "bcc"
+    t.string   "subject"
+    t.text     "content"
+    t.string   "languate"
+    t.string   "status"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -52,6 +68,13 @@ ActiveRecord::Schema.define(:version => 20130724104639) do
     t.string   "last_sign_in_ip"
     t.string   "authentication_token"
     t.integer  "stage",                  :default => 0
+    t.string   "email_address"
+    t.string   "email_password"
+    t.string   "email_imap_server"
+    t.string   "email_imap_port"
+    t.string   "email_smtp_server"
+    t.string   "email_smtp_port"
+    t.string   "last_msg_id"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
