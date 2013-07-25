@@ -1,10 +1,11 @@
 class ContactsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, except: [:index]
   #layout 'simple'
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = current_user.contacts
+    # @contacts = current_user.contacts
+    @contacts = Contact.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @contacts }
@@ -43,7 +44,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(params[:contact])
     @contact.user = current_user
-    
+
     respond_to do |format|
       if @contact.save
         format.html { redirect_to contacts_path, notice: 'Contact was successfully created.' }
