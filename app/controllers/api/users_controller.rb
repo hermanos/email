@@ -13,7 +13,7 @@ class Api::UsersController < DeviseController
 		@stage = JSON.parse(request.body.read)
 		current_user.update_column(:stage, @stage["stage"])
 		render :json => { :success => true, 
-											:data => { :lol => @stage["stage"]} }
+											:data => { :stage => @stage["stage"]} }
 	end
 
 end

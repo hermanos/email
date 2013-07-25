@@ -102,17 +102,13 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
-<<<<<<< HEAD
     redis (3.0.4)
     redis-namespace (1.3.0)
-      redis (~> 3.0.0)
     ruby-gmail (0.3.0)
       mail (>= 2.2.1)
       mime (>= 0.1)
       shared-mime-info
-=======
     ref (1.0.5)
->>>>>>> e497a6410fd84f23d87c27957798e6081159e9ab
     sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -137,13 +133,10 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-<<<<<<< HEAD
     temple (0.6.5)
-=======
     therubyracer (0.11.4)
       libv8 (~> 3.11.8.12)
       ref
->>>>>>> e497a6410fd84f23d87c27957798e6081159e9ab
     thor (0.18.1)
     tilt (1.4.1)
     timers (1.1.0)
@@ -180,13 +173,10 @@ DEPENDENCIES
   redis (~> 3.0.4)
   ruby-gmail
   sass-rails (~> 3.2.3)
-<<<<<<< HEAD
   sidekiq
   sinatra
   slim
   whenever
-=======
   therubyracer
   uglifier (>= 1.0.3)
   unicorn
->>>>>>> e497a6410fd84f23d87c27957798e6081159e9ab
