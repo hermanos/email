@@ -42,12 +42,9 @@ GEM
       railties (~> 3.1)
       warden (~> 1.2.1)
     erubis (2.7.0)
-<<<<<<< HEAD
     gibberish (1.2.2)
-=======
     execjs (1.4.0)
       multi_json (~> 1.0)
->>>>>>> e497a6410fd84f23d87c27957798e6081159e9ab
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
