@@ -11,7 +11,7 @@ lavinia = User.create!(email: 'lavinia@yahoo.com', password: 'aaaaaaaa')
 daniela = User.create!(email: 'daniela@yahoo.com', password: 'aaaaaaaa')
 
 users = [andrei, lavinia, daniela]
-100.times do |i|
+10.times do |i|
 	sender = users.sample
 	receiver = (users - [sender]).sample
 

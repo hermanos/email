@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130702132235) do
+ActiveRecord::Schema.define(:version => 20130724104639) do
+
+  create_table "contacts", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "messages", :force => true do |t|
     t.integer  "sender_id"
@@ -42,8 +50,11 @@ ActiveRecord::Schema.define(:version => 20130702132235) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "authentication_token"
+    t.integer  "stage",                  :default => 0
   end
 
+  add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 

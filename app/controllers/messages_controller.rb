@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, except: [:index, :show]
   layout 'simple'
 
   # GET /messages
@@ -10,7 +10,23 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @messages }
+      format.json do
+        messages = []
+
+        @messages.each do |message|
+          messages << {
+            subject: message.subject,
+            content: message.content,
+            created_at: message.created_at.strftime('%F %T'),
+            from: message.sender.email,
+            to: message.receiver.email,
+            id: message.id,
+            folder: @current_folder
+          }
+        end
+
+        render json: messages
+      end
     end
   end 
 
@@ -58,8 +74,6 @@ class MessagesController < ApplicationController
           format.json { render json: @message.errors, status: :unprocessable_entity }
         end
       end
-    else
-      render m_error_path
     end
   end
 

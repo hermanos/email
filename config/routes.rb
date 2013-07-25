@@ -1,19 +1,37 @@
 Email::Application.routes.draw do
 
 
-  devise_for :users
+  resources :contacts
 
+
+  devise_for :users 
 
   match 'home', :to=>'pages#index'
   get "messages/message_error", as: 'm_error'
 
+  get 'pages/example'
+
   resources :tags
   resources :messages
+<<<<<<< HEAD
   
   require 'sidekiq/web'
   resources :snippets
   root to: "snippets#new"
   mount Sidekiq::Web, at: "/sidekiq"
+=======
+  resources :tokens
+
+namespace :api do
+   devise_scope :user do
+      post 'signin' => 'sessions#create', :as => 'login'
+      delete 'signout' => 'sessions#destroy', :as => 'logout'
+      post 'signup' => 'registrations#create', :as => 'register'
+      post 'setstage' => 'users#set_stage'
+      get 'getstage' => 'users#get_stage'
+    end
+  end
+>>>>>>> e497a6410fd84f23d87c27957798e6081159e9ab
 
 
   # The priority is based upon order of creation:

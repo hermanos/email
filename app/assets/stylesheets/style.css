@@ -18,10 +18,12 @@ hr {
 }
 
 a {
-  color: white;
+  margin-left: 3px;
+  color: #f0f0f0;
 }
 a:hover {
   color: white;
+  text-decoration: none;
 }
 
 html.simple a, html.simple a:hover{
@@ -30,13 +32,9 @@ html.simple a, html.simple a:hover{
 
 span {
   padding: 5px;
- /**/
-background-color:rgba(0,100,0,0.5);
   font-size: 13px;
   border-radius:4px;
 	color: white;
-
-
 }
 
 footer {
@@ -55,18 +53,20 @@ footer a {
   width: 200px;
   height: 60px;
   background-image:url("logo.png");
-  margin-top: 60px;
-  margin-bottom: 80px;
+  margin-top: 75px;
+  margin-bottom: 60px;
   background-repeat: no-repeat;
 }
 
-
 nav.main-menu {
   margin-top: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   font-size: 32px;
   font-weight: 200;
+  float: right;
+  height: 140px;
 }
+
 
 nav.main-menu ul li {
   display: inline-block;
@@ -77,11 +77,7 @@ nav.main-menu ul li a {
   line-height: 40px;
   margin-left: 20px;
   color: #f0f0f0;
-}
-nav.main-menu li:first-child
-{ 
-  font-size: 21px;
-  color: white;
+
 }
 
 nav.main-menu ul li a:hover, nav.main-menu ul li.active a {
@@ -107,6 +103,7 @@ nav.main-menu ul li a:hover, nav.main-menu ul li.active a {
   font-size: 16px;
   line-height: 18px;
 }
+
 textarea{
   width: 400px;
   background-color: #f0f0f0;
@@ -116,14 +113,22 @@ div#content{
   font-family:Helvetica, Arial, sans-serif;
   border:1px solid black;
   overflow: auto;
+  border: 1px black;
+  margin-top: 15px;
 }
 
 div#folders{
-  
-  padding-top:20px;
+  padding: 30px 0px 5px;
   height: 30px;
   margin:0;
-  background-color: #D4D9B0;
+  background: rgb(211,224,169); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(211,224,169,1) 0%, rgba(171,189,115,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(211,224,169,1)), color-stop(100%,rgba(171,189,115,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(211,224,169,1) 0%,rgba(171,189,115,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(211,224,169,1) 0%,rgba(171,189,115,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(211,224,169,1) 0%,rgba(171,189,115,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(211,224,169,1) 0%,rgba(171,189,115,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3e0a9', endColorstr='#abbd73',GradientType=0 ); /* IE6-9 */
 }
 
 div#folders ul{
@@ -141,38 +146,44 @@ div#folders ul li{
 div#folders ul li a{
   font-size: 14px;
   font-family:Helvetica, Arial, sans-serif;
-  background-color: #F3F3F3;
   text-decoration: none;
   padding: 5px 10px;
   border-color: #C8C8C8;
   border-style: solid;
   border-width: 1px ;
-  text-shadow: 1px 1px 1px gray;
+  text-shadow: 1px 0px 1px rgba(150, 150, 150, 1);
   border-radius: 3px;
   margin-left: 5px;
+  background: rgb(238,243,230); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(238,243,230,1) 0%, rgba(223,229,215,1) 40%, rgba(208,215,201,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,243,230,1)), color-stop(40%,rgba(223,229,215,1)), color-stop(100%,rgba(208,215,201,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(238,243,230,1) 0%,rgba(223,229,215,1) 40%,rgba(208,215,201,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(238,243,230,1) 0%,rgba(223,229,215,1) 40%,rgba(208,215,201,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(238,243,230,1) 0%,rgba(223,229,215,1) 40%,rgba(208,215,201,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(238,243,230,1) 0%,rgba(223,229,215,1) 40%,rgba(208,215,201,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eef3e6', endColorstr='#d0d7c9',GradientType=0 ); /* IE6-9 */
 }
-div#folders ul li:first-child{
-  margin-right: 50px;
+
+div#folders #composebutton{
+  margin-right: 190px;
 }
 
 div#folders ul li a:hover{
-  background-color: #E8E8E8;
+  background: rgb(213,220,206); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(213,220,206,1) 0%, rgba(223,229,215,1) 40%, rgba(179,190,173,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(213,220,206,1)), color-stop(40%,rgba(223,229,215,1)), color-stop(100%,rgba(179,190,173,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(213,220,206,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(213,220,206,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(213,220,206,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(213,220,206,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5dcce', endColorstr='#b3bead',GradientType=0 ); /* IE6-9 */
 }
 
-
-/*#folders a:first-child{
-  -webkit-border-bottom-left-radius: 12px;
-  -webkit-border-top-left-radius: 12px;  
-  -moz-border-radius-topleft: 12px;
-  -moz-border-radius-bottomleft: 12px;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-}*/
 div.messagecontainer{
-  margin:10px 20px;
   background-color: #f0f0f0;
-  height:600px;
+  height:640px;
 }
+
 div#list_mails{
   font-size: 12px;
   position: absolute;
@@ -185,27 +196,58 @@ div#list_mails{
   overflow: auto;
 }
 
+div#list_mails:hover{
+  text-decoration: none;
+}
+
 div#list_mails span{
-  color:black;
-	display:block;
+  color: black;
+  padding: 0px 5px;
+	display: block;
 	background-color: transparent;
 }
 
-#list_mails hr{
+div#list_mails span.data{
+  font-size: 10px;
+  margin-left:5px;
+  display: inline-block;
+  float: right;
+}
+
+div#list_mails li a{
+  margin-left: 0px;
+}
+
+/*div#list_mails span.maildet{
+  display: block;
+
+}*/
+
+
+div#list_mails hr{
   margin:0;
   opacity:1;
 }
 
-#list_mails ul {
+div#list_mails ul {
 	margin-left:5px;
 	list-style-type:none;
+
 }
 
 #list_mails ul li.active {
-	background-color: #D4D9B0;
+	background: rgb(209,222,166); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(209,222,166,1) 1%, rgba(188,204,138,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(209,222,166,1)), color-stop(100%,rgba(188,204,138,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(209,222,166,1) 1%,rgba(188,204,138,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(209,222,166,1) 1%,rgba(188,204,138,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(209,222,166,1) 1%,rgba(188,204,138,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(209,222,166,1) 1%,rgba(188,204,138,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1dea6', endColorstr='#bccc8a',GradientType=0 ); /* IE6-9 */
 }
 
 div#mail{
+  background-color: #f8f8f8;
   margin-left: 300px;
   margin-right:152px;
   border-right: 1px solid #E8E8E8;
@@ -222,19 +264,18 @@ div#mail_menu ul{
   margin:0;
 }
 
-div#mail_menu ul li a, div#mail_menu ul li a:hover{
+div#mail_menu ul li a{
   display: block;
   text-decoration: none;
   border-bottom: 1px solid #E8E8E8;
-}
-
-div#mail_menu ul li a{
   background-color:#F0F0F0;
 	margin-left:5px;
+  line-height: 30px;
+  font-size: 14px;
 }
 
 div#mail_menu ul li a:hover{
-  background-color: #F8F8F8;
+  background-color: #f5f5f5;
 }
 
 div#compose{
@@ -243,33 +284,32 @@ div#compose{
     padding-top: 7px;
 }
 
+div#signedin{
+  float:right;
+  padding-top: 5px;
+  margin-right: 20px;
+}
+
 div#signout{
   float:right;
   width: 70px;
+  text-shadow: 1px 0px 1px rgba(150, 150, 150, 1);
 }
 
 div#signout a:hover{
   text-decoration: none;
-
+  color: #4f4f4f;
 }
 
 div#from_to{
   width:100%;
-  height:300px;
+  height: 510px;
   border:1px solid #E8E8E8;
   border-right: none;
   padding: 10px;
 
 }
-div#content{
-  border: 1px black;
-  margin-top: 10px;
-}
 
-div#list_mails span.data{
-  font-size: 10px;
-	margin-left:5px;
-}
 
 h2.formtitle{
   font-weight: normal;
@@ -329,35 +369,190 @@ div.forgotpassform label{
   width: 100px;
 }
 
+div.contactform h2{
+	font-weight:normal;
+}
+
+div.contactback{
+	margin-left:100px;
+}
+
+div.actions{
+	margin-left:100px;
+}
+
+div.editback{
+	margin-left: 100px;
+}
+
+div#compose{
+  background-color: #D4D9B0;
+}
+
+div.composeform{
+  margin-left: 50px;
+}
+
 div.composeform textarea{
 	width:600px;
 	height:300px;
 }
-div#compose{
-  background-color: #D4D9B0;
-}
-div.composeform{
-  margin-left: 50px;
-}
+
 div.composeform label{
   display:inline-block;
   width: 100px;
-  font-size: 18px;
+  font-size: 16px;
 }
+
 div.composeform h1{
   font-size: 28px;
 }
-div#mail #from_to{
-  height: 530px;
-}
-div#list_mails :hover{
-  text-decoration: none;
-}
+
 div#mail{
   background-color: #f8f8f8;
 }
+div.contact
+{
+  background-color: #f8f8f8;
+}
+.tablecont
+{
+  line-height:120%;
 
 
+}
+.span6 span
+{
+float:right;
+}
+.namecont
+{
+  background-color: white;
 
+}
+.emailcont
+{
+  background-color: white;
+}
+.contact span
+{
+float:right;
+}
+.span12
+{background-color: #FCFFF5;
 
+}
+.container li
+{
+  text-align: left;
+}
+#id-emails span
+{
+float:right;
 
+}
+.buton
+{
+  float: right;
+  background-color: #468966;
+  padding: 5px 8px;
+  font-size: 17.5px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.container td{
+  text-align:left;
+  list-style-type: none;
+}
+
+.container  th:nth-child(2){
+  text-align: center;
+
+}
+
+#read-emails{
+  margin-right: 5px;
+  float: right;
+}
+
+#divcont{
+  overflow: auto;
+}
+
+.signout{
+  font-size: 15px;
+}
+
+#read-email{
+	display: inline-block;
+	margin-right: 30px;
+}
+
+div.contactform{
+	background-color: rgba(0,0,0,0.2);
+  width: 800px;
+  height: auto;
+  padding: 45px 80px;
+  border-radius: 8px;
+  color:white;
+}
+
+.table-hover tbody tr:hover > td,
+.table-hover tbody tr:hover > th {
+  background-color: transparent;
+  
+  border-radius: 8px;
+}
+
+.contactform {
+  padding-left: 60px;
+}
+
+.contactform h2{
+ display:inline-block;
+}
+
+.contactform h2:nth-child(2){
+  margin-right:60px;
+}
+
+.span6 ul{
+  display: inline-block;
+
+}
+
+.signout{
+  margin-top:30px;
+}
+
+#butonedit{
+  float:right;
+  margin-right: 10px;
+}
+
+#loginas {
+  float: right;
+  padding: 5px;
+  background-color: rgba(56, 78, 56, 0.5);
+  font-size: 13px;
+  border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+  color: white;
+}
+
+div#error_explanation {
+  display: none;
+}
+
+div.field_with_errors input {
+  border: 1px solid red;
+}
+
+.btn-small{
+  float:right;
+	margin-left:30px;
+}
