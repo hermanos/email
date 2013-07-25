@@ -31,6 +31,7 @@ namespace :api do
     end
       post 'setstage' => 'users#set_stage'
       get 'getstage' => 'users#get_stage'
+      post 'updatemail' => 'update_email#set_email'
   end
 
 
