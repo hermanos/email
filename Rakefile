@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Email::Application.load_tasks
+Echoes::Application.load_tasks

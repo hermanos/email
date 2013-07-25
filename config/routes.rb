@@ -1,4 +1,7 @@
-Email::Application.routes.draw do
+Echoes::Application.routes.draw do
+
+
+  resources :emails
 
 
   resources :contacts
@@ -13,25 +16,22 @@ Email::Application.routes.draw do
 
   resources :tags
   resources :messages
-<<<<<<< HEAD
   
-  require 'sidekiq/web'
-  resources :snippets
-  root to: "snippets#new"
-  mount Sidekiq::Web, at: "/sidekiq"
-=======
-  resources :tokens
+  # require 'sidekiq/web'
+  # resources :snippets
+  # root to: "snippets#new"
+  # mount Sidekiq::Web, at: "/sidekiq"
+  # resources :tokens
 
 namespace :api do
    devise_scope :user do
       post 'signin' => 'sessions#create', :as => 'login'
       delete 'signout' => 'sessions#destroy', :as => 'logout'
       post 'signup' => 'registrations#create', :as => 'register'
+    end
       post 'setstage' => 'users#set_stage'
       get 'getstage' => 'users#get_stage'
-    end
   end
->>>>>>> e497a6410fd84f23d87c27957798e6081159e9ab
 
 
   # The priority is based upon order of creation:

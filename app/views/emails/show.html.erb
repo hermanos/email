@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @email.user_id %>
+</p>
+
+<p>
+  <b>Folder:</b>
+  <%= @email.folder %>
+</p>
+
+<p>
+  <b>Msg:</b>
+  <%= @email.msg_id %>
+</p>
+
+<p>
+  <b>From:</b>
+  <%= @email.from %>
+</p>
+
+<p>
+  <b>To:</b>
+  <%= @email.to %>
+</p>
+
+<p>
+  <b>Cc:</b>
+  <%= @email.cc %>
+</p>
+
+<p>
+  <b>Bcc:</b>
+  <%= @email.bcc %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= @email.subject %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @email.content %>
+</p>
+
+<p>
+  <b>Languate:</b>
+  <%= @email.languate %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @email.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_email_path(@email) %> |
+<%= link_to 'Back', emails_path %>
