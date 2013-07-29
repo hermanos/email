@@ -1,13 +1,10 @@
-	require 'net/imap'
+require 'net/imap'
 class Api::UpdateEmailController < ActionController::Base
-	respond_to :json
 
 	def set_email
 		email_address = params[:email_address]
 		email_password = params[:email_password]
-		puts email_address
-		puts email_password
-		imap = @imap = Net::IMAP.new('imap.gmail.com',993,true,nil,true)
+		imap = Net::IMAP.new('imap.gmail.com',993,true,nil,true)
 		begin
 			imap.authenticate('PLAIN', email_address, email_password)
 		rescue Net::IMAP::NoResponseError
