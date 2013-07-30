@@ -25,8 +25,8 @@ Echoes::Application.routes.draw do
 
 namespace :api do
    devise_scope :user do
-      post 'signin' => 'sessions#create', :as => 'login'
-      delete 'signout' => 'sessions#destroy', :as => 'logout'
+      post 'signin' => 'sessions#create', :as => 'signin'
+      delete 'signout' => 'sessions#destroy', :as => 'signout'
       post 'signup' => 'registrations#create', :as => 'register'
     end
       post 'setstage' => 'users#set_stage'
