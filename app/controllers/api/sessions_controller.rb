@@ -1,5 +1,6 @@
 class Api::SessionsController < Devise::SessionsController
-	before_filter :verify_authenticity_token, except: :create
+	# before_filter :authenticate_user!, unless: { request.format == :json }
+  before_filter :verify_authenticity_token
 
   def create
     sign_in(resource_name, resource)
@@ -13,6 +14,7 @@ class Api::SessionsController < Devise::SessionsController
                                   stage: current_user.stage
                                 }
                       }
+        return
       end
     end
   end
@@ -26,6 +28,7 @@ class Api::SessionsController < Devise::SessionsController
                        info: "Login Failed",
                        data:  {}
                      }
+        return
       end
     end
   end

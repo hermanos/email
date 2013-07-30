@@ -20,7 +20,8 @@ class Api::UpdateEmailController < ActionController::Base
       	current_user.update_attribute(:email_address, email_address)
       	current_user.update_attribute(:email_password, email_password)
       	current_user.update_attribute(:stage, 2)
-      	render json: { success: true, message: "You are now logged in" } 
+      	render json: { success: true, message: "You are now logged in" }
+      	return
       end
     end
 	end

@@ -14,10 +14,12 @@ class Api::RegistrationsController < Devise::RegistrationsController
 					                data: { user: resource,
 					                        auth_token: current_user.authentication_token,
 					                        stage: current_user.stage } 	}
+					return
 				else
 					render json:  { success: false,
 													info: resource.errors,
 													data: {} }
+					return
 				end
 			end
 		end

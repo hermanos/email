@@ -6,6 +6,7 @@ class Api::UsersController < DeviseController
       format.json do
 				render json: { json: true,
 					             data: { stage: current_user.stage } }
+				return
 			end
 		end		
 	end
@@ -17,6 +18,7 @@ class Api::UsersController < DeviseController
       format.json do
 				render json: { json: true, 
 											 data: { stage: stage } }
+				return
 			end
 		end												
 	end
