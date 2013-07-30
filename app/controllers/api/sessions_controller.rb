@@ -1,6 +1,6 @@
 class Api::SessionsController < Devise::SessionsController
 	# before_filter :authenticate_user!, unless: { request.format == :json }
-  before_filter :verify_authenticity_token
+  
 
   def create
     logger.info "intrat in create"
