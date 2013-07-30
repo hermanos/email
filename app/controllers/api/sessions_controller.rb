@@ -9,7 +9,7 @@ class Api::SessionsController < Devise::SessionsController
                json: { success: true,
                           info: "Logged in",
                           data: { 
-                                  auth_token: current_user.authentication_token 
+                                  auth_token: current_user.authentication_token,
                                   stage: current_user.stage
                                 }
                       }
