@@ -3,6 +3,7 @@ class Api::SessionsController < Devise::SessionsController
   skip_before_filter :require_no_authentication
 
   def create
+    build_resource
     logger.info "intrat in create"
     warden.authenticate!(scope: resource_name, :recall => "#{controller_path}#failure")
     logger.info "dupa warden authenticate"
