@@ -3,6 +3,7 @@ class Api::SessionsController < Devise::SessionsController
   before_filter :verify_authenticity_token
 
   def create
+    logger.info "intrat in create"
     sign_in(resource_name, resource)
     respond_to do |format|
       format.json do
@@ -20,6 +21,7 @@ class Api::SessionsController < Devise::SessionsController
   end
 
   def failure
+    logger.info "intrat in failure"
     respond_to do |format|
       format.json do
         render status: 401,
