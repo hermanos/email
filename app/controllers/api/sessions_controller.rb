@@ -4,7 +4,7 @@ class Api::SessionsController < Devise::SessionsController
 
   def create
     logger.info "intrat in create"
-    warden.authenticate!(scope: resource_name)
+    warden.authenticate!(scope: resource_name, :recall => "#{controller_path}#failure")
     logger.info "dupa warden authenticate"
     respond_to do |format|
       format.json do
