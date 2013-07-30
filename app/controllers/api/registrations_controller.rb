@@ -12,7 +12,8 @@ class Api::RegistrationsController < Devise::RegistrationsController
 					render json: { success: true,
 					               info: "Registered",
 					                data: { user: resource,
-					                        auth_token: current_user.authentication_token } 	}
+					                        auth_token: current_user.authentication_token,
+					                        stage: current_user.stage } 	}
 				else
 					render json:  { success: false,
 													info: resource.errors,
