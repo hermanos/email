@@ -15,7 +15,7 @@ class Api::UsersController < DeviseController
 		current_user.update_column(:stage, stage)
 		respond_to do |format|
       format.json do
-				render json: { json:, 
+				render json: { json: true, 
 											 data: { stage: stage } }
 			end
 		end												
