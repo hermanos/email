@@ -8,7 +8,7 @@ class Api::RegistrationsController < Devise::RegistrationsController
 		respond_to do |format|
 			format.json do
 				if resource.save
-					sign_in resource
+					warden.authenticate!(:scope => resource_name)
 					render json: { success: true,
 					               info: "Registered",
 					                data: { user: resource,
