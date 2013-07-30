@@ -4,7 +4,7 @@ class Api::SessionsController < Devise::SessionsController
 
   def create
     logger.info "intrat in create"
-    sign_in(resource_name, resource)
+    warden.authenticate!(scope: resource_name)
     respond_to do |format|
       format.json do
         render status: 200,
