@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
-  before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :verify_authenticity_token
+ # before_filter :authenticate_user!, except: [:index, :show]
   layout 'simple'
 
   # GET /messages

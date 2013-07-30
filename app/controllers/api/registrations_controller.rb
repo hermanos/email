@@ -1,5 +1,5 @@
 class Api::RegistrationsController < Devise::RegistrationsController
-	skip_before_filter :verify_authencity_token
+	before_filter :verify_authencity_token, except: :create
 
 	# respond_to :json
 

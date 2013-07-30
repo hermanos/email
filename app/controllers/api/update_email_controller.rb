@@ -1,6 +1,6 @@
 require 'net/imap'
 class Api::UpdateEmailController < ActionController::Base
-	skip_before_filter :verify_authenticity_token	
+	before_filter :verify_authenticity_token	
 	
 	def set_email
 		email_address = params[:email_address]

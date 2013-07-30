@@ -1,6 +1,9 @@
 class ContactsController < ApplicationController
-  before_filter :authenticate_user!, except: [:index]
+  # before_filter :authenticate_user!, except: [:index]
   #layout 'simple'
+
+  before_filter :verify_authenticity_token
+
   # GET /contacts
   # GET /contacts.json
   def index

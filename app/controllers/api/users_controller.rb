@@ -1,5 +1,5 @@
 class Api::UsersController < DeviseController
-	before_filter :authenticate_user!
+	before_filter :verify_authenticity_token
 
 	def get_stage
 		respond_to do |format|
@@ -16,7 +16,7 @@ class Api::UsersController < DeviseController
 		respond_to do |format|
       format.json do
 				render json: { json:, 
-												data: { stage: stage } }
+											 data: { stage: stage } }
 			end
 		end												
 	end

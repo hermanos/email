@@ -1,4 +1,5 @@
 class EmailsController < ApplicationController
+  before_filter :verify_authenticity_token
   # GET /emails
   # GET /emails.json
   def index

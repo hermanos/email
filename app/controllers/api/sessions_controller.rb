@@ -1,5 +1,5 @@
 class Api::SessionsController < Devise::SessionsController
-	 skip_before_filter :verify_authenticity_token
+	before_filter :verify_authenticity_token, except: :create
 
   def create
     sign_in(resource_name, resource)
