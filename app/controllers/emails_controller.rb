@@ -3,7 +3,7 @@ class EmailsController < ApplicationController
   # GET /emails
   # GET /emails.json
   def index
-    @emails = Email.all
+    @emails = current_user.emails
 
     respond_to do |format|
       format.html # index.html.erb

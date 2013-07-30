@@ -27,7 +27,7 @@ namespace :mail do
 			  receive = Mail.find(what: :last, count: 20, order: :desc)
 			  receive.each do |mail|
 				  if Email.find_by_msg_id(mail.message_id).nil?
-				    email = Email.create!(user_id: user.id, folder: 'inbox', msg_id: mail.message_id, from: join_address(mail.from), to: join_address(mail.to), cc: join_address(mail.cc), bcc: nil, subject: mail.subject, content: mail.body.decoded, languate: 'en', status: 'unread')
+				    email = Email.create!(user_id: user.id, folder: 'inbox', msg_id: mail.message_id, from: join_address(mail.from), to: join_address(mail.to), cc: join_address(mail.cc), bcc: nil, subject: mail.subject, content: mail.parts[0].body.decoded.gsub("\n", ' '), languate: 'en', status: 'unread')
 				  else
 				    #render json: { success: false, data: receive.from }
 				    return
