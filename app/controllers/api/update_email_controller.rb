@@ -5,7 +5,7 @@ class Api::UpdateEmailController < ActionController::Base
 	def set_email
 		email_address = params[:email_address]
 		email_password = params[:email_password]
-
+    puts params.inspect
 		imap = @imap = Net::IMAP.new('imap.gmail.com',993,true,nil,true)
 		respond_to do |format|
       format.json do

@@ -1,5 +1,4 @@
 class Api::SessionsController < Devise::SessionsController
-	# before_filter :authenticate_user!, unless: { request.format == :json }
   skip_before_filter :require_no_authentication
   skip_before_filter :authenticate_user!
 

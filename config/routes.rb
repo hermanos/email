@@ -17,12 +17,6 @@ Echoes::Application.routes.draw do
   resources :tags
   resources :messages
   
-  # require 'sidekiq/web'
-  # resources :snippets
-  # root to: "snippets#new"
-  # mount Sidekiq::Web, at: "/sidekiq"
-  # resources :tokens
-
 namespace :api do
    devise_scope :user do
       post 'signin' => 'sessions#create', :as => 'signin'
@@ -32,7 +26,7 @@ namespace :api do
       post 'setstage' => 'users#set_stage'
       get 'getstage' => 'users#get_stage'
       post 'updatemail' => 'update_email#set_email'
-      post 'mailsync' => 'mail_sync#create_mail'
+      post 'mailsync' => 'sync#create_mail'
   end
 
 
