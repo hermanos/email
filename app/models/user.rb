@@ -49,13 +49,6 @@ class User < ActiveRecord::Base
 
   def mail_defaults
     return false if email_address.nil?
-    # imap = Net::IMAP.new('imap.gmail.com',993,true,nil,true)
-    # begin
-    #   imap.authenticate('PLAIN', email_address, email_password)
-    # rescue Net::IMAP::NoResponseError
-    #   puts "failed to authenticate"
-    #   return
-    # end
     settings = { 
                   address: "imap.gmail.com",
                   port: 993,
@@ -88,7 +81,7 @@ class User < ActiveRecord::Base
       end
     end
   end
-  
+
   def join_address(address)
     unless address.nil?
       address.join(',')     

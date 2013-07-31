@@ -2,13 +2,16 @@ class Api::SyncController < ActionController::Base
 	before_filter :verify_authenticity_token
 
   def mail_defaults
-  	unless user.email_address.nil?
+  	unless current_user.email_address.nil?
+  		settings = {
+  									:address => "imap.gmail.com", 
+  									:port => 993, 
+  									:user_name => current_user.email_address, 
+  									:password => current_user.email_password, 
+  									:enable_ssl => true
+  							 }
   		Mail.defaults do 
-  		  retriever_method :imap, :address => "imap.gmail.com", 
-  		                          :port => 993, 
-  		                          :user_name => current_user.email_address, 
-  		                          :password => current_user.email_password, 
-  		                          :enable_ssl => true
+  		  retriever_method :imap, settings
   		end
   		return true
   		else
@@ -18,7 +21,8 @@ class Api::SyncController < ActionController::Base
 
 	def retrieve_mail
 		folder = params[:folder]
-		if(mail_defaults(current_user))
+		puts folder
+		if(mail_defaults)
 		  receive = Mail.find(mailbox: set_folder(folder), what: :last, count: 20, order: :desc)
 		  receive.each do |mail|
 			  if Email.find_by_msg_id(mail.message_id).nil?
@@ -27,7 +31,7 @@ class Api::SyncController < ActionController::Base
 			    											content: mail.parts[0].body.decoded.gsub("\n", ' ').gsub("*", ' '), languate: 'en', status: 'unread')
 			  end
 			end
-		  user.update_attribute(:stage, 3)
+		  current_user.update_attribute(:stage, 3)
 		end
 	end
 
@@ -37,10 +41,11 @@ class Api::SyncController < ActionController::Base
 		if folder.downcase == 'inbox'
 			return
 		elsif folder.downcase == 'sent'
-			folder = '[Gmail]/' + folder + ' Mail'
+			folder = '[Gmail]/' + folder.humanize + ' Mail'
 		else
 			folder = '[Gmail]/' + folder.downcase.humanize
 		end
+
 	end
 
 	def join_address(address)
