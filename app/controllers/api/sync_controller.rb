@@ -21,7 +21,6 @@ class Api::SyncController < ActionController::Base
 
 	def retrieve_mail
 		folder = params[:folder]
-		puts folder
 		if(mail_defaults)
 		  receive = Mail.find(mailbox: set_folder(folder), what: :last, count: 20, order: :desc)
 		  receive.each do |mail|
@@ -32,6 +31,7 @@ class Api::SyncController < ActionController::Base
 			  end
 			end
 		  current_user.update_attribute(:stage, 3)
+		  render json: { stage: current_user.stage }
 		end
 	end
 
