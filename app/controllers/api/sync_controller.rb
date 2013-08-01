@@ -48,6 +48,9 @@ class Api::SyncController < ActionController::Base
 				size = defined?(attachment.decoded) ? attachment.decoded.length : attachment.size
 				if size < 2.097e6 && attachment.content_type.start_with?('audio/')
 					filename = mail.message_id + attachment.filename
+					unless File.exist?("#{Rails.root}/public/attachments/" + current_user.id.to_s + '/' + filename)
+						FileUtils.mkdir_p("#{Rails.root}/public/attachments/#{current_user.id}")
+					end
 					File.open("#{Rails.root}/public/attachments/" + current_user.id.to_s + '/' + filename, "w+b", 0644) { |f| f.write attachment.body.decoded }
 					return filename
 				end
