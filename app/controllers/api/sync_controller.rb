@@ -19,19 +19,23 @@ class Api::SyncController < ActionController::Base
   	end
   end
 
-	def retrieve_mail
-		folder = params[:folder]
+	def retrieve_mail(folder = nil)
+		folder ||= params[:folder]
 		if(mail_defaults)
 		  receive = Mail.find(mailbox: set_folder(folder), what: :last, count: 20, order: :desc)
 		  receive.each do |mail|
 			  if Email.find_by_msg_id(mail.message_id).nil?
 			    email = Email.create!(user_id: current_user.id, folder: folder, msg_id: mail.message_id, from: join_address(mail.from),
 			    											to: join_address(mail.to), cc: join_address(mail.cc), bcc: nil, subject: mail.subject,
-			    											content: mail.parts[0].body.decoded.gsub("\n", ' ').gsub("*", ' '), languate: 'en', status: 'unread')
+			    											content: get_body(mail), languate: 'en', status: 'unread')
 			  end
 			end
 		  current_user.update_attribute(:stage, 3)
-		  render json: { stage: current_user.stage }
+		  respond_to do |format|
+		  	format.json do
+		  		render json: { stage: current_user.stage }
+		  	end
+		  end
 		end
 	end
 
@@ -47,6 +51,14 @@ class Api::SyncController < ActionController::Base
 		end
 
 	end
+
+	def get_body(mail)
+    if mail.parts[0].nil?
+      mail.body.decoded.gsub("\n", ' ').gsub("*", ' ')
+    else
+      mail.parts[0].body.decoded.gsub("\n", ' ').gsub("*", ' ')
+    end
+  end
 
 	def join_address(address)
 	  unless address.nil?

@@ -27,6 +27,8 @@ namespace :api do
       get 'getstage' => 'users#get_stage'
       post 'updatemail' => 'update_email#set_email'
       post 'mailsync' => 'sync#retrieve_mail'
+      post 'sendmail' => 'send#send_mail'
+      post 'upload' => 'upload#create'
   end
 
 
