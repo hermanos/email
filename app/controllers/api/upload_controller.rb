@@ -7,7 +7,7 @@ class Api::UploadController < ActionController::Base
 				puts params[:file].inspect
 				puts current_user.id
 				name = params[:file].original_filename
-				directory = "public/attachments/#{current_user.id}"
+				directory = "#{Rails.root}/public/attachments/#{current_user.id}"
 				path = File.join(directory, name)
 				unless File.exist?(path)
 					FileUtils.mkdir_p(directory)

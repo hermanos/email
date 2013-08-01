@@ -4,7 +4,7 @@ class Api::DownloadController < Api::UploadController
 	def send_to_download
 		respond_to do |format|
 			format.json do
-				send_file	'public/attachments/' + current_user.id.to_s + '/' + params[:filename]
+				send_file	"#{Rails.root}/public/attachments/" + current_user.id.to_s + '/' + params[:filename]
 			end
 		end
 	end

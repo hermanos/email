@@ -19,7 +19,7 @@ class Api::SendController < Api::SyncController
 		mail.body			params[:email][:content]
 		puts params[:email][:attach]
 		unless params[:email][:attach].nil?
-			mail.add_file 'public/attachments/' + current_user.id.to_s + '/' + params[:email][:attach].to_s
+			mail.add_file "#{Rails.root}/public/attachments/" + current_user.id.to_s + '/' + params[:email][:attach].to_s
 		end
 		mail.deliver
 		retrieve_mail('sent')
