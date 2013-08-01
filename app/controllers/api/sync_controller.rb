@@ -24,10 +24,11 @@ class Api::SyncController < ActionController::Base
 		if(mail_defaults)
 		  receive = Mail.find(mailbox: set_folder(folder), what: :last, count: 20, order: :desc)
 		  receive.each do |mail|
+		  	check_attachment(mail)
 			  if Email.find_by_msg_id(mail.message_id).nil?
 			    email = Email.create!(user_id: current_user.id, folder: folder, msg_id: mail.message_id, from: join_address(mail.from),
 			    											to: join_address(mail.to), cc: join_address(mail.cc), bcc: nil, subject: mail.subject,
-			    											content: get_body(mail), languate: 'en', status: 'unread')
+			    											content: get_body(mail), languate: 'en', status: 'unread', attachment: check_attachment(mail))
 			  end
 			end
 		  current_user.update_attribute(:stage, 3)
@@ -40,6 +41,20 @@ class Api::SyncController < ActionController::Base
 	end
 
 	private
+
+	def check_attachment(mail)
+		unless mail.attachments.nil?
+			mail.attachments.each do |attachment|
+				size = defined?(attachment.decoded) ? attachment.decoded.length : attachment.size
+				if size < 2.097e6 && attachment.content_type.start_with?('audio/')
+					filename = mail.message_id + attachment.filename
+					File.open('public/attachments/' + current_user.id.to_s + '/' + filename, "w+b", 0644) { |f| f.write attachment.body.decoded }
+					return filename
+				end
+			end
+		end
+		return nil
+	end
 
 	def set_folder(folder)
 		if folder.downcase == 'inbox'

@@ -2,11 +2,6 @@ class Api::SendController < Api::SyncController
 	before_filter :verify_authenticity_token
 
 	def send_mail
-		# mail_params = {
-		# 								to: params[:email][:to],
-		# 								subject: params[:email][:subject],
-		# 								content: params[:email][:content]
-		# 							}
 		settings = {
 									address: 'smtp.gmail.com',
 									port: 587,
@@ -24,7 +19,7 @@ class Api::SendController < Api::SyncController
 		mail.body			params[:email][:content]
 		puts params[:email][:attach]
 		unless params[:email][:attach].nil?
-			mail.add_file Rails.root.to_s + '/attachments/' + current_user.id.to_s + '/' + params[:email][:attach].to_s
+			mail.add_file 'public/attachments/' + current_user.id.to_s + '/' + params[:email][:attach].to_s
 		end
 		mail.deliver
 		retrieve_mail('sent')

@@ -29,6 +29,7 @@ namespace :api do
       post 'mailsync' => 'sync#retrieve_mail'
       post 'sendmail' => 'send#send_mail'
       post 'upload' => 'upload#create'
+      get 'download' => 'download#send_to_download'
   end
 
 
