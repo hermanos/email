@@ -22,7 +22,7 @@ class Api::SyncController < ActionController::Base
 	def retrieve_mail(folder = nil)
 		folder ||= params[:folder]
 		if(mail_defaults)
-		  receive = Mail.find(mailbox: set_folder(folder), what: :last, count: 20)
+		  receive = Mail.find(mailbox: set_folder(folder), what: :last, count: 20, order: :desc)
 		  receive.each do |mail|
 		  	check_attachment(mail)
 			  if Email.find_by_msg_id(mail.message_id).nil?
