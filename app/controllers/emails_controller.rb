@@ -3,7 +3,7 @@ class EmailsController < ApplicationController
   # GET /emails
   # GET /emails.json
   def index
-    @emails = current_user.emails.sort_by { |message| message.created_at }.reverse
+    @emails = current_user.emails
 
     respond_to do |format|
       format.html # index.html.erb
