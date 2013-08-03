@@ -47,7 +47,7 @@ class Api::SyncController < ActionController::Base
 			mail.attachments.each do |attachment|
 				size = defined?(attachment.decoded) ? attachment.decoded.length : attachment.size
 				if size < 2.097e6 && attachment.content_type.start_with?('audio/')
-					filename = mail.message_id + attachment.filename
+					filename = attachment.filename
 					unless File.exist?("#{Rails.root}/public/attachments/" + current_user.id.to_s + '/' + filename)
 						FileUtils.mkdir_p("#{Rails.root}/public/attachments/#{current_user.id}")
 					end
