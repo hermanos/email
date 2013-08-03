@@ -4,8 +4,6 @@ class Api::UploadController < ActionController::Base
 	def create
 		respond_to do |format|
 			format.json do
-				puts params.inspect
-				puts current_user.id
 				name = params[:file].original_filename
 				directory = "#{Rails.root}/public/attachments/#{current_user.id}"
 				path = File.join(directory, name)
